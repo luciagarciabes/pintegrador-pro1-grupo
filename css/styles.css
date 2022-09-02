@@ -1,3 +1,39 @@
-body {
-    background-color: aqua;
+/*   CSS del Index */
+
+body{
+    background-color: rgb(15, 9, 19);
+}
+
+.padre_header{
+
+    display: flex;
+    width: 100%;
+    height: 400px;
+    
+}
+
+.logo_header{    /*logo*/
+    width: 200px;
+    height: 200px;
+    align-self: flex-start;
+}
+
+.nav_header{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+ 
+}
+
+.lista_nav_header{
+    width: 45%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    color: white;
+    padding: 0px;
+}
+.linavheader{         /* son las etiquetas <a> de los li de la barra de navegación del header*/
+    text-decoration: none;
+    color: white;
 }
