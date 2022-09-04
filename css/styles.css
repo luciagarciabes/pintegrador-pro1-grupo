@@ -48,7 +48,7 @@ body{
 
 /* main*/
 .seccion_foto_principal{
-    background-image: url(../img/fondo\ home\ mas\ oscura.png);
+    background-image: url(../img/fondo\ home\ mas\ oscura.png);   
     background-size: 1500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
