@@ -73,16 +73,35 @@ body{
 
 
 .seccion_peliculas{
-    height: 400px;
+    height: 600px;
+  
+    
+    
 }
 .h2_secciones{
     color: white;
 }
 
 .seccion_series{
-    height: 400px; 
+    height: 600px; 
 }
 
 .seccion_lo_mas_visto{
-    height: 400px;  
+    height: 600px;  
+}
+
+.lista_principal{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+    padding: 0px;
+}
+
+.li_piedefoto{
+    color: white;
+}
+
+.lista_anidada{
+    list-style-type: none;
 }
