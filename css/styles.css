@@ -4,6 +4,7 @@
 
 body{
     background-color: rgb(15, 9, 19);
+    font-family: 'Overpass', sans-serif;
 }
 
 .padre_header{
@@ -23,7 +24,7 @@ body{
     display: flex;
     width: 1000%;
     height: 50px;
-    background-color: rgb(72, 10, 131);
+    background-color: rgb(54, 7, 98);
     align-self: flex-end;
 }
 
@@ -34,18 +35,20 @@ body{
     justify-content: space-evenly;
     color: white;
     padding: 0px;
-    background-color: rgb(72, 10, 131);
+    font-size: 20px;
+    align-items: center;
+
 }
 .linavheader{         /* son las etiquetas <a> de los li de la barra de navegación del header*/
     text-decoration: none;
     color: white;
-    align-items: flex-end;
+    
 }
 
 
 /* main*/
 .seccion_foto_principal{
-    background-image: url(../img/Foto\ principal\ Home.png);
+    background-image: url(../img/fondo\ home\ mas\ oscura.png);
     background-size: 1500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -55,9 +58,14 @@ body{
     display: flex;
 }
 
+.h2_secciones{
+    font-size: 50px;
+}
+
 .hijo_Seccion_foto_principal{
-    width: 500px;
+    width: 700px;
     align-self: center;
+    padding: 150px;
 }
 
 .texto_en_foto_principal{
@@ -68,13 +76,12 @@ body{
 
 .separador{
     height: 50px;
-    background-color:rgb(72, 10, 131) ;
+    background-color:rgb(54, 7, 98);
 }
 
 
 .seccion_peliculas{
     height: 600px;
-  
     
     
 }
@@ -104,4 +111,20 @@ body{
 
 .lista_anidada{
     list-style-type: none;
+}
+
+
+
+
+/* footer*/
+
+footer{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+}
+
+.lista_footer{
+    list-style-type: none;
+    
 }
