@@ -14,18 +14,18 @@ body{
     height: 200px;  
 }
 
-.logo_header{    /*logo*/
-    width: 200px;
-    height: 200px;
-    align-self: flex-start;
+.logo_header{
+    border-radius: 20px;
 }
+
+
 
 .nav_header{                         /* padre_header(nav_header(lista_nav_header(linavheader)))*/
     display: flex;
     width: 1000%;
     height: 50px;
     background-color: rgb(54, 7, 98);
-    align-self: flex-end;
+    align-self:flex-end;     /* */
 }
 
 .lista_nav_header{
