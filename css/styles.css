@@ -128,3 +128,17 @@ footer{
     list-style-type: none;
     
 }
+
+/* Css detail-movie */
+
+.headerdetp{
+    background-image: url(../img/pochoclos.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    text-align: center;
+    
+}
+.fotodp{
+    justify-content: center;
+    width: max-content;
+}
