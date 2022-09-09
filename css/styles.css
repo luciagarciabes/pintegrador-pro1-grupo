@@ -129,10 +129,12 @@ footer{
     
 }
 
+
+
 /* Css detail-movie */
 
-
 .titulodm{
+    font-family: 'Raleway', sans-serif;
     font-size: 50px ;
     color: white;
     text-align: center;
@@ -140,6 +142,7 @@ footer{
 }
 
 .texto-dm{
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     color: white;
     text-align: left;
@@ -157,6 +160,7 @@ footer{
 
 }
 .nombre-dm{
+    font-family: 'Raleway', sans-serif;
     font-size: 25px;
     color: white;
     text-align: left;
@@ -174,7 +178,32 @@ footer{
 }
 
 
+/* Css Favorite */
 
+.titulofav{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px ;
+    color: white;
+    text-align: center;
+    background-color:rgba(54, 7, 98, 0.642) ;
+}
 
+.lista_favoritos{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+    padding: 0px;
+}
 
-    
+.lista_favoritos2{
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+    padding: 0px;
+}
+
+/* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */ 
