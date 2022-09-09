@@ -136,26 +136,30 @@ footer{
     font-size: 50px ;
     color: white;
     text-align: center;
-    background-color:rgb(54, 7, 98) ;
+    background-color:rgba(54, 7, 98, 0.642) ;
 }
 
 .texto-dm{
     font-size: 20px;
     color: white;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    text-align: left;
+    font-family:Arial, Helvetica, sans-serif;
     
 
 }
 .cuadros-dm{
     background-color: rgba(54, 7, 98, 0.276);
+    
 }
-.tit-video-dm{
+.video-dm{
     justify-content: center;
-    font-size: 20px;
-    color: white;
-    text-align: center;
+    
 
+}
+.nombre-dm{
+    font-size: 25px;
+    color: white;
+    text-align: left;
 }
 
 .maindm{
