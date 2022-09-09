@@ -132,40 +132,44 @@ footer{
 /* Css detail-movie */
 
 
-.titulodetp{
+.titulodm{
     font-size: 50px ;
     color: white;
     text-align: center;
     background-color:rgb(54, 7, 98) ;
 }
 
-.titulos-detailmovie{
-    font-size: 30px;
-    color: white;
-    text-align: center;
-}
-
-.des-donde-estan-las-rubias{
-    background-color: rgba(54, 7, 98, 0.276);
-    justify-content: center;
+.texto-dm{
     font-size: 20px;
     color: white;
-    text-align:left;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
     
 
 }
-.dondrubias{
-    padding: 0px 250px;
-
-}
-.videorubias{
+.cuadros-dm{
     background-color: rgba(54, 7, 98, 0.276);
+}
+.tit-video-dm{
     justify-content: center;
     font-size: 20px;
     color: white;
     text-align: center;
 
 }
+
+.maindm{
+    padding: 0px 250px;
+}
+
+.fondo{
+    background-image: url(../img/fondo\ dm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
 
 
 
