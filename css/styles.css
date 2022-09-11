@@ -185,7 +185,7 @@ footer{
     font-size: 50px ;
     color: white;
     text-align: center;
-    background-color:rgba(54, 7, 98, 0.642) ;
+    background-color:rgb(54, 7, 98) ;
 }
 
 .lista_favoritos{
@@ -207,3 +207,29 @@ footer{
 }
 
 /* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */ 
+
+
+
+
+/* Pagina resultado de busqueda*/
+
+.body_result{
+    background-color: rgb(15, 9, 19);
+    font-family: 'Overpass', sans-serif;
+}
+.section1_resbysq{
+    height: 120px;
+}
+
+.h1res_busq{
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.h2_secciones_res_busq{
+    font-size: 30px;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
