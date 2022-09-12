@@ -7,22 +7,36 @@ body{
     font-family: 'Overpass', sans-serif;
 }
 
-.padre_header{
-
+.header{
     display: flex;
-    width: 100%;
-    height: 200px;  
 }
 
+.padre2_header{
+    /* display: flex; */
+    width: 100%;
+    height: 100px;  
+}
+
+.logo_header_article{
+    height: 100px;
+    width: 140px;
+}
 .logo_header{
     border-radius: 20px;
+}
+
+.form_header{
+   
+    height: 50px;
+    text-align: end;
+    padding: 10px 30px 0px 0px;
 }
 
 
 
 .nav_header{                         /* padre_header(nav_header(lista_nav_header(linavheader)))*/
     display: flex;
-    width: 1000%;
+    width: 100%;
     height: 50px;
     background-color: rgb(54, 7, 98);
     align-self:flex-end;     /* */
@@ -53,13 +67,14 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
-    height: 600px;
+    height: 550px;
     width: 100%;
     display: flex;
 }
 
 .h2_secciones{
     font-size: 50px;
+    margin: 20px
 }
 
 .hijo_Seccion_foto_principal{
@@ -188,7 +203,7 @@ footer{
     font-size: 50px ;
     color: white;
     text-align: center;
-    background-color:rgba(54, 7, 98, 0.642) ;
+    background-color:rgb(54, 7, 98) ;
 }
 
 .lista_favoritos{
@@ -210,3 +225,30 @@ footer{
 }
 
 /* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */ 
+
+
+
+
+/* Pagina resultado de busqueda*/
+
+.body_result{
+    background-color: rgb(15, 9, 19);
+    font-family: 'Overpass', sans-serif;
+}
+.section1_resbysq{
+    height: 60px;
+}
+
+.h1res_busq{
+    font-size: 40px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+.h2_secciones_res_busq{
+    font-size: 30px;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}

@@ -14,18 +14,34 @@
 </head>
 
 <body>
+<header class="header">
+  <article class="logo_header_article">  </article>
 
-  <header class="padre_header">
-   <!--<img  class="logo_header" src="" alt="Logo" height="180px"> --> 
+
+  <article class="padre2_header">
+    <form  class="form_header" action="./search-results.html" method="GET">
+      <input type="text" name="busqueda" value="">
+      
+  
+  
+  
+     </form>
+
+
   <!--barra de navegación del header-->
-   <nav class="nav_header"> <ul class="lista_nav_header">
-    <li >  <a class="linavheader" href="../htmls/index.html"> Home </a>  </li>
-    <li> <a class="linavheader"href=""> Mis Favoritos</a>   </li>
-    <li > <a class="linavheader" href="">Detalles Series </a>  </li>
-    <li > <a  class="linavheader"href=""> Detalles Peliculas </a>  </li>
-    <li> <a class="linavheader" href=""> Géneros</a> </li>
+  <nav class="nav_header"> <ul class="lista_nav_header">
+    <li >  <a class="linavheader" href="./index.html"> Home </a>  </li>
+    <li> <a class="linavheader" href="./favorite.html"> Mis Favoritos</a>   </li>
+    <li > <a class="linavheader" href="./detail-serie.html">Detalles Series </a>  </li>
+    <li > <a  class="linavheader" href="./detail-movie.html"> Detalles Peliculas </a>  </li>
+    <li> <a class="linavheader" href="./ genres.html"> Géneros</a> </li>
     
-   </ul></nav>
+   </ul></nav> 
+
+   
+  </article>
+
+
 
   </header>
 
@@ -44,42 +60,42 @@
 
       <ul class="lista_principal">   <!-- los lis de esta lista son las peliculas-->
         <li> 
-          <img  class="imagenes_home" src="./img/donde_estan_las_rubias.jpg" alt=" Pelicula donde estan las rubias" height="250px">            <!--foto de la pelicula-->
+         <a href="./detail-movie.html"><img  class="imagenes_home" src="./img/donde_estan_las_rubias.jpg" alt=" Pelicula donde estan las rubias" height="250px">            <!--foto de la pelicula-->
           <ul class="lista_anidada">      <!-- Detalles de la pelicula-->
-           <li class="li_piedefoto"> Donde están las Rubias </li>
-           <li class="li_piedefoto"> Estreno: 24/06, 2004</li>
+           <li class="li_piedefoto">  Donde están las Rubias  </li>
+           <li class="li_piedefoto"> Estreno: 24/06, 2004</li> </a>
           
           </ul> </li>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Titanic.jpg" alt="Pelicula Titanic" height="250px" > 
+          <a href="./detail-movie.html"> <img  class="imagenes_home" src="./img/Titanic.jpg" alt="Pelicula Titanic" height="250px" > 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> Titanic</li>
-           <li class="li_piedefoto">Estreno: 5/02, 1998</li>
+           <li class="li_piedefoto">Estreno: 5/02, 1998</li> 
          
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek" height="250px"> 
+          <a href="./detail-movie.html"><img  class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek" height="250px"> 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> Shrek</li>
-           <li class="li_piedefoto"> Estreno: 19/07, 2001</li>
+           <li class="li_piedefoto"> Estreno: 19/07, 2001</li> 
           
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Dear Jhon.png" alt=" Pelicula Dear Jhon" height="250px"  >  
+         <a href=""> <img  class="imagenes_home" src="./img/Dear Jhon.png" alt=" Pelicula Dear Jhon" height="250px"  >  
            <ul class="lista_anidada">
            <li class="li_piedefoto"> Dear John</li>
            <li class="li_piedefoto"> Estreno: 15/04, 2010</li>
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Corre.webp" alt="Pelicula Corre" height="250px"> 
+        <a href="./detail-movie.html">  <img  class="imagenes_home" src="./img/Corre.webp" alt="Pelicula Corre" height="250px"> 
           <ul class="lista_anidada">
           <li class="li_piedefoto"> Corre</li>
           <li class="li_piedefoto"> Estreno: 14/05, 2020</li>
-         </ul> </li>
+         </ul> </li> </a>
 
       </ul>
     </section>
@@ -94,42 +110,42 @@
       <br><br>
       <ul class="lista_principal">   <!-- los lis de esta lista son las series-->
         <li> 
-          <img  class="imagenes_home" src="./img/friends.webp" alt=" Serie friends" height="250px">            <!--foto de la serie-->
+          <a href="./detail-serie.html"><img  class="imagenes_home" src="./img/friends.webp" alt=" Serie friends" height="250px">            <!--foto de la serie-->
           <ul class="lista_anidada">      <!-- Detalles de la serie-->
            <li class="li_piedefoto"> Friends </li>
            <li class="li_piedefoto"> Estreno: 22/09, 1994</li>
           
-          </ul> </li>
+          </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/bridgerton.jpg"  alt="Serie Bridgerton" height="250px" > 
+          <a href="./detail-serie.html"><img  class="imagenes_home" src="./img/bridgerton.jpg"  alt="Serie Bridgerton" height="250px" > 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> Bridgerton</li>
            <li class="li_piedefoto">Estreno: 25/12, 2020</li>
          
-           </ul> </li>
+           </ul> </li> </a> 
 
          <li> 
-          <img  class="imagenes_home" src="./img/blinspot.jpg" alt=" Serie Blindspot" height="250px"> 
+         <a href="./detail-serie.html"><img  class="imagenes_home" src="./img/blinspot.jpg" alt=" Serie Blindspot" height="250px"> 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> Blindspot</li>
            <li class="li_piedefoto"> Estreno: 21/09, 2015 </li>
           
-           </ul> </li>
+           </ul> </li> </a> 
 
          <li> 
-          <img  class="imagenes_home" src="./img/the office.jpg" alt=" Serie the office" height="250px"  >  
+         <a href="./detail-serie.html"><img  class="imagenes_home" src="./img/the office.jpg" alt=" Serie the office" height="250px"  >  
            <ul class="lista_anidada">
            <li class="li_piedefoto"> The office</li>
            <li class="li_piedefoto"> Estreno: 24/03, 2005</li>
-           </ul> </li>
+           </ul> </li> </a> 
 
          <li> 
-          <img  class="imagenes_home" src="./img/pretty little liars.webp" alt="Serie Pretty little liars" height="250px"> 
+         <a href="./detail-serie.html"> <img  class="imagenes_home" src="./img/pretty little liars.webp" alt="Serie Pretty little liars" height="250px"> 
           <ul class="lista_anidada">
           <li class="li_piedefoto"> Pretty little liars</li>
           <li class="li_piedefoto"> Estreno: 08/06, 2010</li>
-         </ul> </li>
+         </ul> </li> </a>
 
       </ul>
 
@@ -145,42 +161,42 @@
       <br><br>
       <ul class="lista_principal">   <!-- los lis de esta lista son las series y peliculas más vistas-->
         <li> 
-          <img  class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek" height="250px">            <!--foto de la serie o pelicula-->
+         <a href="./detail-movie.html"> <img  class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek" height="250px">            <!--foto de la serie o pelicula-->
           <ul class="lista_anidada">      <!-- Detalles de la serie o pelicula-->
            <li class="li_piedefoto"> Shrek</li>
            <li class="li_piedefoto"> Estreno: 19/07, 2001</li>
           
-          </ul> </li>
+          </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/friends.webp" alt="Serie friends" height="250px" > 
+          <a href="./detail-serie.html"> <img  class="imagenes_home" src="./img/friends.webp" alt="Serie friends" height="250px" > 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> friends</li>
            <li class="li_piedefoto">Estreno:  22/09, 1994 </li>
          
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Corre.webp" alt=" Pelicula Corre" height="250px"> 
+         <a href="./detail-movie.html"> <img  class="imagenes_home" src="./img/Corre.webp" alt=" Pelicula Corre" height="250px"> 
           <ul class="lista_anidada">
            <li class="li_piedefoto"> Corre</li>
            <li class="li_piedefoto"> Estreno: 14/05, 2020</li>
           
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/blinspot.jpg" alt="Serie Blindspot" height="250px"  >  
+         <a href="./detail-serie.html"> <img  class="imagenes_home" src="./img/blinspot.jpg" alt="Serie Blindspot" height="250px"  >  
            <ul class="lista_anidada">
            <li class="li_piedefoto"> Blindspot</li>
            <li class="li_piedefoto"> Estreno: 21/09, 2015</li>
-           </ul> </li>
+           </ul> </li> </a>
 
          <li> 
-          <img  class="imagenes_home" src="./img/Dear Jhon.png" alt="Pelicula Dear Jhon" height="250px"> 
+          <a href="./detail-movie.html"><img  class="imagenes_home" src="./img/Dear Jhon.png" alt="Pelicula Dear Jhon" height="250px"> 
           <ul class="lista_anidada">
           <li class="li_piedefoto"> Dear Jhon</li>
           <li class="li_piedefoto"> Estreno:15/04, 2010 </li>
-         </ul> </li>
+         </ul> </li> </a> 
 
       </ul>
 
