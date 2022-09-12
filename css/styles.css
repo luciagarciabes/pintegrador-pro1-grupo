@@ -176,6 +176,9 @@ footer{
     background-position: center;
     background-size: cover;
 }
+.list-style{
+    list-style: none;
+}
 
 
 /* Css Favorite */
