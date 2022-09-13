@@ -171,6 +171,7 @@ footer{
 }
 .video-dm{
     justify-content: center;
+    text-align: center;
 
 }
 .nombre-d{
@@ -192,6 +193,14 @@ footer{
 }
 .list-style{
     list-style: none;
+}
+.videodetalles{
+    display: flex;
+    flex-direction: column;
+
+}
+.video{
+    align-self: center;
 }
 
 
