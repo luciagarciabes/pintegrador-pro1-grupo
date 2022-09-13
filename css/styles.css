@@ -232,6 +232,15 @@ footer{
     padding: 0px;
 }
 
+.fondofav{
+    background-image: url(../img/fondo\ dm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
 /* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */ 
 
 
@@ -259,4 +268,9 @@ footer{
     font-size: 30px;
     color: white;
     font-family: 'Overpass', sans-serif;
+}
+
+/* generos */
+.h2generos{
+ 
 }
