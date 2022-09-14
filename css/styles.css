@@ -21,8 +21,13 @@ body{
     height: 100px;
     width: 140px;
 }
-.logo_header{
-    border-radius: 20px;
+.logoheader{
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    text-align: left;
+    align-self: flex-start;
+    margin: 5px 0px 0px 10px;
 }
 
 .form_header{
@@ -56,7 +61,10 @@ body{
 .linavheader{         /* son las etiquetas <a> de los li de la barra de navegación del header*/
     text-decoration: none;
     color: white;
-    
+}
+
+.botonnav{
+
 }
 
 
@@ -142,6 +150,12 @@ footer{
 .lista_footer{
     list-style-type: none;
     
+}
+
+.logofooter{
+    width: 200px;
+    height: 200px;
+
 }
 
 
@@ -272,5 +286,31 @@ footer{
 
 /* generos */
 .h2generos{
+    align-self: center;
+    color: white;
  
 }
+
+.genero{
+    flex-direction: column;
+}
+
+.sectiongeneros{
+    display: flex;
+   
+}
+
+.h1generos{
+    color: white;
+    
+}
+
+
+.titulofav{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px ;
+    color: white;
+    text-align: center;
+    background-color:rgb(54, 7, 98) ;
+}
+
