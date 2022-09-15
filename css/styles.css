@@ -9,6 +9,8 @@ body{
 
 .header{
     display: flex;
+    height: 130px;
+    background-color: rgb(15, 9, 19) ;
 }
 
 .padre2_header{
@@ -19,23 +21,41 @@ body{
 
 .logo_header_article{
     height: 100px;
-    width: 140px;
+    width: 230px;
 }
+
 .logoheader{
-    border-radius: 60px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 85px;
     text-align: left;
     align-self: flex-start;
-    margin: 5px 0px 0px 10px;
+    margin: 20px 5px 0px 10px;
 }
 
 .form_header{
-   
     height: 50px;
     text-align: end;
+    margin-bottom: 20px;
     padding: 10px 30px 0px 0px;
 }
+
+.inputform{
+    height: 30px;
+    width: 200px;
+    font-family:  'Overpass', sans-serif;
+}
+
+.botonform{
+    border-radius: 5px;
+    background-color: rgb(65, 11, 115);
+    color: white;
+    padding: 3px 5px;
+    margin: 5px 0px 0px 10px;
+    width: 100px;
+    height: 35px;
+    font-family: 'Overpass', sans-serif;
+}
+
 
 
 
@@ -63,9 +83,8 @@ body{
     color: white;
 }
 
-.botonnav{
 
-}
+
 
 
 /* main*/
@@ -104,7 +123,7 @@ body{
 
 
 .seccion_peliculas{
-    height: 600px;
+    height: 550px;
     
     
 }
@@ -126,6 +145,7 @@ body{
     align-self: center;
     width: 100%;
     padding: 0px;
+    margin-top: 50px;
 }
 
 .li_piedefoto{
@@ -136,6 +156,15 @@ body{
     list-style-type: none;
 }
 
+.vermas{
+    background-color: rgb(54, 7, 98);
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
 
 
 
@@ -144,18 +173,29 @@ body{
 footer{
     display: flex;
     color: white;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .lista_footer{
     list-style-type: none;
+    display: flex;
     
 }
 
 .logofooter{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 80px;
+    text-align: left;
+    margin-left: 20px;
+ 
 
+}
+.linombresfooter{
+    margin: 0px 8px 0px 8px;
+    background-color: rgba(54, 7, 98, 0.616);
+    padding: 10px;
 }
 
 
@@ -201,6 +241,7 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0px;
 }
 .list-style{
     list-style: none;
@@ -235,12 +276,14 @@ footer{
 
 /* Css Favorite */
 
-.titulofav{
+h1.titulofav{
     font-family: 'Raleway', sans-serif;
-    font-size: 50px ;
-    color: white;
-    text-align: center;
-    background-color:rgb(54, 7, 98) ;
+    font-size: 30px;
+    color: rgb(251, 249, 249);
+    text-align: left;
+    margin-top: 80px;
+
+   
 }
 
 .lista_favoritos{
@@ -263,6 +306,7 @@ footer{
     width: 100%;
     padding: 0px;
     margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 .fondofav{
@@ -285,51 +329,65 @@ footer{
     background-color: rgb(15, 9, 19);
     font-family: 'Overpass', sans-serif;
 }
-.section1_resbysq{
-    height: 60px;
-}
+
 
 .h1res_busq{
     font-size: 40px;
     color: white;
     padding: 0px;
-    text-align: center;
+    text-align: start;
     margin: 0px;
 }
 
-.h2_secciones_res_busq{
-    font-size: 30px;
+.h2resbusq{
+    color: white;
+    margin-left: 10px;
+    background-color: rgba(128, 128, 128, 0.139);
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.h3_secciones_res_busq{
+    font-size: 25px;
     color: white;
     font-family: 'Overpass', sans-serif;
-}
-
-/* generos */
-.h2generos{
-    align-self: center;
-    color: white;
- 
-}
-
-.genero{
-    flex-direction: column;
-}
-
-.sectiongeneros{
-    display: flex;
-   
-}
-
-.h1generos{
-    color: white;
     
 }
 
+/* generos */
+.sectiongeneral{
+    display: flex;
+    justify-content: space-around;
+}
 
-.titulofav{
-    font-family: 'Raleway', sans-serif;
-    font-size: 50px ;
+.genero{
+    color: white;
+    background-color: rgba(54, 7, 98, 0.642);
+    padding: 10px 25px 10x 25px;
+    width: 30vw;
+    height: 50vh;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.h1generos{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.bodygeneros{
+    background-color: rgb(15, 9, 19);
+}
+
+.h1principalgeneros{
+    font-size: 60px;
     color: white;
     text-align: center;
-    background-color:rgb(54, 7, 98) ;
 }
+
+
+
 
