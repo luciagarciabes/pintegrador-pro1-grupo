@@ -443,3 +443,110 @@ h1.titulofav {
 .lifav {
     margin-top: 20px;
 }
+
+@media(max-width: 420px) {
+    .header {
+        display: flex;
+        height: 300px;
+        background-color: rgb(0, 0, 1);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_header {
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background-color: rgb(54, 7, 98);
+        align-self: flex-end;
+    }
+
+    .lista_nav_header {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-evenly;
+        color: white;
+        padding: 0px;
+        font-size: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .lista_principal {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        flex-direction: column;
+        padding: 0px;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .lista_anidada {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .seccion_peliculas {
+        height: 2000px;
+    }
+
+    .vermas {
+        background-color: rgb(54, 7, 98);
+        padding: 8px;
+        color: white;
+        text-decoration: none;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .seccion_series {
+        height: 2050px;
+    }
+
+    .seccion_lo_mas_visto {
+        height: 2050px;
+    }
+
+
+
+    .lista_footer {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: black;
+        height: 300px;
+        flex-direction: column;}
+
+        .seccion_foto_principal {
+            background-image: url(../img/fondo\ home\ mas\ oscura.png);
+            background-size: 1500px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: bottom;
+            height: 550px;
+            width: 100%;
+            display: flex;
+            display: none;}
+
+            .h2_secciones {
+                color: white;
+                margin-top: 80px;
+            }
+
+            main {
+                display: block;
+                margin-bottom: 30px;
+            }
