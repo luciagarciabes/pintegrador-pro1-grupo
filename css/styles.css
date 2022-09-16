@@ -566,10 +566,6 @@ a {
         margin-bottom: 30px;
     }
 
-    .maind {
-        padding: 0px 0px;
-    }
-
     .titulod {
         font-family: 'Raleway', sans-serif;
         font-size: 30px;
@@ -594,6 +590,7 @@ a {
         flex-direction: column;
         margin-bottom: 40px;
         background-color: rgba(128, 128, 128, 0.315);
+        font-size: 18px;
     }
 
 
@@ -644,7 +641,17 @@ a {
     }
 
     .maind {
-        padding: 15px 15px;
+        padding: 30px 15px;
+    }
+    .informacion {
+        background-color: rgba(128, 128, 128, 0.315);
+        line-height: 25px;
+        margin-right: 40px;
+        font-size: 15px;
+    }
+    .lifav {
+        margin-top: 20px;
+        margin-bottom: 25px;
     }
 
 }
