@@ -1,30 +1,29 @@
-
 /*   CSS del Index */
 /*header*/
 
-body{
+body {
     background-color: rgb(15, 9, 19);
     font-family: 'Overpass', sans-serif;
 }
 
-.header{
+.header {
     display: flex;
     height: 130px;
-    background-color: rgb(0, 0, 1) ;
+    background-color: rgb(0, 0, 1);
 }
 
-.padre2_header{
+.padre2_header {
     /* display: flex; */
     width: 100%;
-    height: 100px;  
+    height: 100px;
 }
 
-.logo_header_article{
+.logo_header_article {
     height: 100px;
     width: 230px;
 }
 
-.logoheader{
+.logoheader {
     width: 200px;
     height: 85px;
     text-align: left;
@@ -32,20 +31,20 @@ body{
     margin: 20px 5px 0px 10px;
 }
 
-.form_header{
+.form_header {
     height: 50px;
     text-align: end;
     margin-bottom: 20px;
     padding: 10px 30px 0px 0px;
 }
 
-.inputform{
+.inputform {
     height: 30px;
     width: 200px;
-    font-family:  'Overpass', sans-serif;
+    font-family: 'Overpass', sans-serif;
 }
 
-.botonform{
+.botonform {
     border-radius: 5px;
     background-color: rgb(65, 11, 115);
     color: white;
@@ -59,15 +58,17 @@ body{
 
 
 
-.nav_header{                         /* padre_header(nav_header(lista_nav_header(linavheader)))*/
+.nav_header {
+    /* padre_header(nav_header(lista_nav_header(linavheader)))*/
     display: flex;
     width: 100%;
     height: 50px;
     background-color: rgb(54, 7, 98);
-    align-self:flex-end;     /* */
+    align-self: flex-end;
+    /* */
 }
 
-.lista_nav_header{
+.lista_nav_header {
     width: 100%;
     display: flex;
     list-style-type: none;
@@ -78,7 +79,9 @@ body{
     align-items: center;
 
 }
-.linavheader{         /* son las etiquetas <a> de los li de la barra de navegación del header*/
+
+.linavheader {
+    /* son las etiquetas <a> de los li de la barra de navegación del header*/
     text-decoration: none;
     color: white;
 }
@@ -88,8 +91,8 @@ body{
 
 
 /* main*/
-.seccion_foto_principal{
-    background-image: url(../img/fondo\ home\ mas\ oscura.png);   
+.seccion_foto_principal {
+    background-image: url(../img/fondo\ home\ mas\ oscura.png);
     background-size: 1500px;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -99,47 +102,48 @@ body{
     display: flex;
 }
 
-.h2_secciones{
+.h2_secciones {
     font-size: 50px;
     margin: 20px
 }
 
-.hijo_Seccion_foto_principal{
+.hijo_Seccion_foto_principal {
     width: 700px;
     align-self: center;
     padding: 150px;
 }
 
-.texto_en_foto_principal{
-   color: white;
-   font-size: 60px;
-  
+.texto_en_foto_principal {
+    color: white;
+    font-size: 60px;
+
 }
 
-.separador{
+.separador {
     height: 50px;
-    background-color:rgb(54, 7, 98);
+    background-color: rgb(54, 7, 98);
 }
 
 
-.seccion_peliculas{
+.seccion_peliculas {
     height: 550px;
-    
-    
+
+
 }
-.h2_secciones{
+
+.h2_secciones {
     color: white;
 }
 
-.seccion_series{
-    height: 600px; 
+.seccion_series {
+    height: 600px;
 }
 
-.seccion_lo_mas_visto{
-    height: 600px;  
+.seccion_lo_mas_visto {
+    height: 600px;
 }
 
-.lista_principal{
+.lista_principal {
     display: flex;
     justify-content: space-around;
     align-self: center;
@@ -148,15 +152,15 @@ body{
     margin-top: 50px;
 }
 
-.li_piedefoto{
+.li_piedefoto {
     color: white;
 }
 
-.lista_anidada{
+.lista_anidada {
     list-style-type: none;
 }
 
-.vermas{
+.vermas {
     background-color: rgb(54, 7, 98);
     padding: 8px;
     color: white;
@@ -170,7 +174,7 @@ body{
 
 /* footer*/
 
-footer{
+footer {
     display: flex;
     color: white;
     justify-content: space-between;
@@ -179,21 +183,22 @@ footer{
     background-color: black;
 }
 
-.lista_footer{
+.lista_footer {
     list-style-type: none;
     display: flex;
-    
+
 }
 
-.logofooter{
+.logofooter {
     width: 180px;
     height: 80px;
     text-align: left;
     margin-left: 20px;
- 
+
 
 }
-.linombresfooter{
+
+.linombresfooter {
     margin: 0px 8px 0px 8px;
     background-color: rgba(54, 7, 98, 0.616);
     padding: 10px;
@@ -203,28 +208,30 @@ footer{
 
 /* Css detail-movie, series y generos */
 
-.titulod{
+.titulod {
     font-family: 'Raleway', sans-serif;
-    font-size: 50px ;
+    font-size: 50px;
     color: white;
     text-align: center;
-    background-color:rgba(54, 7, 98, 0.642) ;
+    background-color: rgba(54, 7, 98, 0.642);
 }
 
-.texto-d{
+.texto-d {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     color: white;
     text-align: left;
     display: flex;
-    
+
 
 }
-.cuadros-d{
-    background-color: rgba(54, 7, 98, 0.276);  
+
+.cuadros-d {
+    background-color: rgba(54, 7, 98, 0.276);
+    margin-bottom: 100px;
 }
 
-.nombre-d{
+.nombre-d {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     color: white;
@@ -233,11 +240,11 @@ footer{
     letter-spacing: 5px;
 }
 
-.maind{
+.maind {
     padding: 0px 150px;
 }
 
-.fondo{
+.fondo {
     background-image: url(../img/fondo2.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -245,19 +252,22 @@ footer{
     margin: 0px;
 }
 
-li{
+li {
     list-style-type: none;
 }
-.videodetalles{
+
+.videodetalles {
     display: flex;
     flex-direction: column;
 
 }
-.video{
+
+.video {
     align-self: center;
     margin-top: 60px;
 }
-.flex{
+
+.flex {
     display: flex;
     width: 500px;
     height: 40px;
@@ -267,26 +277,30 @@ li{
 
     background-color: rgba(128, 128, 128, 0.315);
 }
-.informacion{
+
+.informacion {
     background-color: rgba(128, 128, 128, 0.315);
     line-height: 25px;
     margin-right: 40px;
 }
-.h2_dg{
+
+.h2_dg {
     font-size: 40px;
     margin-top: 80px;
     color: white;
     margin-left: 40px;
 }
-.lista_dg{
+
+.lista_dg {
     display: flex;
-    justify-content:space-evenly;
-    align-self: center;
+    justify-content: space-around;
+
     width: 100%;
-    padding: 0px;
+    padding-left: 10px;
     margin-top: 50px;
 }
-.agrf{
+
+.agrf {
     color: white;
     text-decoration: none;
     background-color: rgba(54, 7, 98, 0.642);
@@ -298,17 +312,17 @@ li{
 
 /* Css Favorite */
 
-h1.titulofav{
+h1.titulofav {
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
     color: rgb(251, 249, 249);
     text-align: left;
     margin-top: 80px;
 
-   
+
 }
 
-.lista_favoritos{
+.lista_favoritos {
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-around;
@@ -317,10 +331,10 @@ h1.titulofav{
     padding: 0px;
     background-size: cover;
     margin-top: 30px;
-    
+
 }
 
-.lista_favoritos2{
+.lista_favoritos2 {
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-around;
@@ -331,7 +345,7 @@ h1.titulofav{
     margin-bottom: 70px;
 }
 
-.fondofav{
+.fondofav {
     background-image: url(../img/fondo\ dm.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -341,20 +355,20 @@ h1.titulofav{
 
 
 
-/* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */ 
+/* VER COMO CAMBIAR LA FONT DE LOS TEXTOS DE DETALLES DE PELICULAS */
 
 
 
 
 /* Pagina resultado de busqueda*/
 
-.body_result{
+.body_result {
     background-color: rgb(15, 9, 19);
     font-family: 'Overpass', sans-serif;
 }
 
 
-.h1res_busq{
+.h1res_busq {
     font-size: 40px;
     color: white;
     padding: 0px;
@@ -362,7 +376,7 @@ h1.titulofav{
     margin: 0px;
 }
 
-.h2resbusq{
+.h2resbusq {
     color: white;
     margin-left: 10px;
     background-color: rgba(128, 128, 128, 0.139);
@@ -370,47 +384,62 @@ h1.titulofav{
     margin-top: 50px;
 }
 
-.h3_secciones_res_busq{
+.h3_secciones_res_busq {
     font-size: 25px;
     color: white;
     font-family: 'Overpass', sans-serif;
-    
+
 }
 
 /* generos */
-.sectiongeneral{
+.sectiongeneral {
     display: flex;
     justify-content: space-around;
 }
 
-.genero{
+.genero {
     color: white;
-    background-color: rgba(54, 7, 98, 0.642);
-    padding: 10px 25px 10x 25px;
+    background-color: rgba(100, 88, 112, 0.642);
     width: 30vw;
     height: 50vh;
     margin: 40px;
     text-decoration: none;
 }
 
-.h1generos{
+.h2generos {
     text-align: center;
-    color: white;
+    color: rgb(180, 173, 173);
     font-size: 40px;
     text-decoration: none;
     letter-spacing: 2px;
 }
 
-.bodygeneros{
+.bodygeneros {
     background-color: rgb(15, 9, 19);
 }
 
-.h1principalgeneros{
+.h1principalgeneros {
     font-size: 60px;
     color: white;
     text-align: center;
 }
 
+.iconos {
+    height: 200px;
+    width: 200px;
+    padding-left: 100px;
+
+}
+
+.botonfav {
+    background-color: rgba(70, 5, 135, 0.913);
+    color: white;
+    text-decoration: none;
+    padding: 5px;
 
 
+}
 
+.lifav {
+    margin-top: 20px;
+}

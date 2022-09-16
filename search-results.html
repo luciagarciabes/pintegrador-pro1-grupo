@@ -1,96 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcornflix</title>
-   <link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popcornflix</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 
 
-   <main>
+<main>
 
-<body class="body_result">
-  <header class="header">
-    <article class="logo_header_article">
-    <img class="logoheader" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="Logo">
-    </article>
-  
-    <article class="padre2_header">
-      <form  class="form_header" action="./search-results.html" method="GET">
-        <input class="inputform" type="text" name="busqueda" value="" placeholder=" Escriba un título...">
-        <button class="botonform">Buscar</button>
-       </form>
-  
-  
-    <!--barra de navegación del header-->
-    <nav class="nav_header"> <ul class="lista_nav_header">
-      <li >  <a class="linavheader" href="./index.html"> Home </a>  </li>
-      <li> <a class="linavheader" href="./favorite.html"> Mis Favoritos</a>   </li>
-      <li > <a class="linavheader" href="./detail-serie.html">Detalles Series </a>  </li>
-      <li > <a  class="linavheader" href="./detail-movie.html"> Detalles Peliculas </a>  </li>
-      <li> <a class="linavheader" href="./ genres.html"> Géneros</a> </li>
-      
-     </ul></nav> 
-  
-     
-    </article>
-  
-  
-  
+  <body class="body_result">
+    <header class="header">
+      <article class="logo_header_article">
+        <img class="logoheader" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="Logo">
+      </article>
+
+      <article class="padre2_header">
+        <form class="form_header" action="./search-results.html" method="GET">
+          <input class="inputform" type="text" name="busqueda" value="" placeholder=" Escriba un título...">
+          <button class="botonform">Buscar</button>
+        </form>
+
+
+        <!--barra de navegación del header-->
+        <nav class="nav_header">
+          <ul class="lista_nav_header">
+            <li> <a class="linavheader" href="./index.html"> Home </a> </li>
+            <li> <a class="linavheader" href="./favorite.html"> Mis Favoritos</a> </li>
+            <li> <a class="linavheader" href="./detail-serie.html">Detalles Series </a> </li>
+            <li> <a class="linavheader" href="./detail-movie.html"> Detalles Peliculas </a> </li>
+            <li> <a class="linavheader" href="./ genres.html"> Géneros</a> </li>
+
+          </ul>
+        </nav>
+
+
+      </article>
+
+
+
     </header>
 
-   
 
-  
-      
-    
-   
-<h2 class="h2resbusq"> Usted buscó: "Películas"</h2>
 
-    <section class="seccion_peliculas">      <!--seccion de peliculas-->
+
+
+
+
+    <h2 class="h2resbusq"> Usted buscó: "Películas"</h2>
+
+    <section class="seccion_peliculas">
+      <!--seccion de peliculas-->
       <br><br>
-      
-      <ul class="lista_principal">   <!-- los lis de esta lista son las peliculas-->
-        <li> 
-         <a href="./detail-movie.html"><img  class="imagenes_home" src="./img/donde_estan_las_rubias.jpg" alt=" Pelicula donde estan las rubias" height="250px">            <!--foto de la pelicula-->
-          <ul class="lista_anidada">      <!-- Detalles de la pelicula-->
-           <li class="li_piedefoto">  Donde están las Rubias  </li>
-           <li class="li_piedefoto"> Estreno: 24/06, 2004</li> </a>
-          
-          </ul> </li>
 
-         <li> 
-          <a href="./detail-movie.html"> <img  class="imagenes_home" src="./img/Titanic.jpg" alt="Pelicula Titanic" height="250px" > 
+      <ul class="lista_principal">
+        <!-- los lis de esta lista son las peliculas-->
+        <li>
+          <a href="./detail-movie.html"><img class="imagenes_home" src="./img/donde_estan_las_rubias.jpg"
+              alt=" Pelicula donde estan las rubias" height="250px">
+            <!--foto de la pelicula-->
+            <ul class="lista_anidada">
+              <!-- Detalles de la pelicula-->
+              <li class="li_piedefoto"> Donde están las Rubias </li>
+              <li class="li_piedefoto"> Estreno: 24/06, 2004</li>
+          </a>
+
+      </ul>
+      </li>
+
+      <li>
+        <a href="./detail-movie.html"> <img class="imagenes_home" src="./img/Titanic.jpg" alt="Pelicula Titanic"
+            height="250px">
           <ul class="lista_anidada">
-           <li class="li_piedefoto"> Titanic</li>
-           <li class="li_piedefoto">Estreno: 5/02, 1998</li> 
-         
-           </ul> </li> </a>
+            <li class="li_piedefoto"> Titanic</li>
+            <li class="li_piedefoto">Estreno: 5/02, 1998</li>
 
-         <li> 
-          <a href="./detail-movie.html"><img  class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek" height="250px"> 
+          </ul>
+      </li> </a>
+
+      <li>
+        <a href="./detail-movie.html"><img class="imagenes_home" src="./img/Shrek.jpg" alt=" Pelicula Shrek"
+            height="250px">
           <ul class="lista_anidada">
-           <li class="li_piedefoto"> Shrek</li>
-           <li class="li_piedefoto"> Estreno: 19/07, 2001</li> 
-          
-           </ul> </li> </a>
+            <li class="li_piedefoto"> Shrek</li>
+            <li class="li_piedefoto"> Estreno: 19/07, 2001</li>
 
-         <li> 
-         <a href=""> <img  class="imagenes_home" src="./img/Dear Jhon.png" alt=" Pelicula Dear Jhon" height="250px"  >  
-           <ul class="lista_anidada">
-           <li class="li_piedefoto"> Dear John</li>
-           <li class="li_piedefoto"> Estreno: 15/04, 2010</li>
-           </ul> </li> </a>
+          </ul>
+      </li> </a>
 
-         <li> 
-        <a href="./detail-movie.html">  <img  class="imagenes_home" src="./img/Corre.webp" alt="Pelicula Corre" height="250px"> 
+      <li>
+        <a href=""> <img class="imagenes_home" src="./img/Dear Jhon.png" alt=" Pelicula Dear Jhon" height="250px">
           <ul class="lista_anidada">
-          <li class="li_piedefoto"> Corre</li>
-          <li class="li_piedefoto"> Estreno: 14/05, 2020</li>
-         </ul> </li> </a>
+            <li class="li_piedefoto"> Dear John</li>
+            <li class="li_piedefoto"> Estreno: 15/04, 2010</li>
+          </ul>
+      </li> </a>
+
+      <li>
+        <a href="./detail-movie.html"> <img class="imagenes_home" src="./img/Corre.webp" alt="Pelicula Corre"
+            height="250px">
+          <ul class="lista_anidada">
+            <li class="li_piedefoto"> Corre</li>
+            <li class="li_piedefoto"> Estreno: 14/05, 2020</li>
+          </ul>
+      </li> </a>
 
       </ul>
     </section>
@@ -100,18 +117,19 @@
       <article class="logo footer">
         <img class="logofooter" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="logo footer">
       </article>
-    
+
       <article class="nombres_footer">
-    
-      <ul class="lista_footer">
-        <li class="linombresfooter"> Clara Battaglia</li>
-        <br>
-        <li class="linombresfooter"> Martina Scarfoni</li>
-        <br>
-        <li class="linombresfooter">  Lucia García Bes</li>
-      </ul>
-    </article>
+
+        <ul class="lista_footer">
+          <li class="linombresfooter"> Clara Battaglia</li>
+          <br>
+          <li class="linombresfooter"> Martina Scarfoni</li>
+          <br>
+          <li class="linombresfooter"> Lucia García Bes</li>
+        </ul>
+      </article>
     </footer>
-      
-</body>
+
+  </body>
+
 </html>
