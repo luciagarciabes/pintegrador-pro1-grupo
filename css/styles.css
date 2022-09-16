@@ -643,12 +643,14 @@ a {
     .maind {
         padding: 30px 15px;
     }
+
     .informacion {
         background-color: rgba(128, 128, 128, 0.315);
         line-height: 25px;
         margin-right: 40px;
         font-size: 15px;
     }
+
     .lifav {
         margin-top: 20px;
         margin-bottom: 25px;
