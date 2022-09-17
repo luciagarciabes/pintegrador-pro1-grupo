@@ -86,9 +86,6 @@ body {
 }
 
 
-
-
-
 /* main*/
 .seccion_foto_principal {
     background-image: url(../img/fondo\ home\ mas\ oscura.png);
@@ -162,6 +159,7 @@ body {
 
 .lista_anidada {
     list-style-type: none;
+    padding: 0px;
 }
 
 .vermas {
@@ -172,6 +170,8 @@ body {
     margin-top: 10px;
     text-align: center;
 }
+
+.lista
 
 
 
@@ -206,6 +206,7 @@ footer {
     margin: 0px 8px 0px 8px;
     background-color: rgba(54, 7, 98, 0.616);
     padding: 10px;
+    color: white;
 }
 
 
