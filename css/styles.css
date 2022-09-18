@@ -657,4 +657,53 @@ a {
         margin-bottom: 25px;
     }
 
+    .lista_favoritos{
+     padding: 30px 15px;
+     display: block;
+     margin-bottom: 30px;
+     justify-content: center;
+
+    }
+    
+    .lista_anidada{
+        margin: 30px;
+    }
+
+    .titulofav{
+        margin-block: 30px;
+        padding-top: 30px;
+
+    }
+
+    .lista_favoritos2{
+     padding: 30px 15px;
+     display: block;
+     margin-bottom: 30px;
+     justify-content: center;
+    }
+
+    .h1principalgeneros{
+        margin-block: 30px;
+        padding-top: 70px;
+    }
+
+    .genero{
+       padding-left: 15px;
+       margin-bottom: 30px;
+       justify-content: center;
+       width: 100%;
+       margin-top: 50px;
+       flex-direction: column;
+
+    }
+
+    .sectiongeneral{
+       padding-top: 0px;
+       display: flex;
+    }
+
+    .iconos{
+       padding: 20px;
+    }
+
 }
