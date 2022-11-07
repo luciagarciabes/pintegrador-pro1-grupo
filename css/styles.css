@@ -181,6 +181,7 @@ footer {
     align-items: center;
     padding: 20px;
     background-color: black;
+    height: 300px;
 }
 
 .lista_footer {
@@ -205,6 +206,10 @@ footer {
     color: white;
 }
 
+.logo-tmdb {
+    width: 100px;
+    height: 120px;
+}
 
 
 /* Css detail-movie, series y generos */
@@ -530,16 +535,7 @@ a {
         flex-direction: column;
     }
 
-    footer {
-        display: flex;
-        color: white;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: black;
-        height: 300px;
-        flex-direction: column;
-    }
+    
 
     .seccion_foto_principal {
         background-image: url(../img/fondo\ home\ mas\ oscura.png);
