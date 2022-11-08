@@ -61,6 +61,7 @@ fetch(seriesPopulares)
                     </li>`
                     /* no sabemos donde encontrar el link para poner el path de las fotos #######*/
     }
+    
     return data
 })
 .catch(function (error) {
