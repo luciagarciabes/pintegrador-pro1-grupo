@@ -247,6 +247,13 @@ footer {
 
 }
 
+.img-detalle-pelicula{
+    width: 400px;
+    height: 450px;
+    margin-top: 40px;
+   align-self: center;
+}
+
 .cuadros-d {
     background-color: rgba(54, 7, 98, 0.276);
     margin-bottom: 100px;
