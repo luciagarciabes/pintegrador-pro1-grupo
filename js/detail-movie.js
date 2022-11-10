@@ -43,6 +43,24 @@ fetch(peliculaDetalle)
 })
 
 
+fetch()
+.then(function (respuesta) {
+    return respuesta.json()
+    
+})
+.then(function (data) {
+    return data
+    
+})
+.catch(function (error) {
+    return error
+    
+})
+
+/* tengo que hacer otro fetch para las peliculas que vienen desde toprated????????*/
+
+
+
 
 
 

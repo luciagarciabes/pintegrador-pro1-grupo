@@ -247,7 +247,7 @@ footer {
 
 }
 
-.img-detalle-pelicula{
+.img-detalle-titulos{
     width: 400px;
     height: 450px;
     margin-top: 40px;
@@ -297,7 +297,7 @@ li {
 
 .flex {
     display: flex;
-    width: 500px;
+    width: 100%;
     height: 40px;
     justify-content: space-around;
     align-items: center;

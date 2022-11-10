@@ -84,10 +84,11 @@ fetch(loMasVisto)
     console.log(data.results);
     topRated= data.results;
     contenido3= ""
+    
 
     for (let i = 0; i < 5; i++) {
        contenido3+=  `<li class="cada_titulo">
-                            <a href="./detail-serie.html?idMasVisto=${topRated[i].id}"> <img class="imagenes_home" src="https://image.tmdb.org/t/p/w300${topRated[i].poster_path}" alt="${topRated[i].original_title}"
+                            <a href="./detail-movie.html?idMasVisto=${topRated[i].id}"> <img class="imagenes_home" src="https://image.tmdb.org/t/p/w300${topRated[i].poster_path}" alt="${topRated[i].original_title}"
                                 height="250px">
                                 <ul class="lista_anidada">
                                 <li class="li_piedefoto"> ${topRated[i].original_title}</li>
@@ -108,3 +109,4 @@ fetch(loMasVisto)
 /*  De donde sacamos los titulos para peliculas y series mas vistos ==> es trending?      conviene? cuando queremos poner el id deberia hacer una diferencia entre las paginas de detalle serie y pelicula? serie mejor poner solo peliculas o solo series?
 
 ME PARECE que vamos a tener que elegir solo un tipo porque sino los nombres de las propiedades cambian y por eso se muestra el titulo en algunas si y en otras no*/
+/* sigo con el mismo problema, porque si pongo top rated solo peliculas, me aparece un error cuando quiero ver el detalle*/ 
