@@ -85,6 +85,11 @@ body {
     color: white;
 }
 
+.img_search_result{
+    
+    height: 250px;
+
+}
 
 /* main*/
 .seccion_foto_principal {
