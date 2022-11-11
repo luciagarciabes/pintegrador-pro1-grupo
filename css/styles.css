@@ -243,6 +243,7 @@ footer {
     color: white;
     text-align: left;
     display: flex;
+    width: 100%;
 
 
 }

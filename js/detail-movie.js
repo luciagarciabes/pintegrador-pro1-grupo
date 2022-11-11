@@ -9,7 +9,7 @@ let peliculaDetalle= `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=$
 
 
 /* Capturo elementos*/
-let img= document.querySelector(".img-detalle-pelicula");
+let img= document.querySelector(".img-detalle-titulos");
 let textoDetalleMmovie= document.querySelector(".texto-detalle-movie");
 let nombreDetallePelicula= document.querySelector(".nombre-detalle-pelicula")
 

@@ -8,7 +8,7 @@ let api_key = "a999f9c45003fc79555aea4968543ddf";
 let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
 
 /* Capturo elementos */ 
-let img= document.querySelector(".img-detalle-serie");
+let img= document.querySelector(".img-detalle-titulos");
 let textoDetalleSerie= document.querySelector(".texto-detalle-serie");
 let nombreDetalleSerie= document.querySelector(".nombre-detalle-serie")
 
@@ -23,11 +23,11 @@ fetch(serieDetalle)
     let contenido=`<ul>
                         <article class="flex">
                             <li><strong>${serie.first_air_date}</strong></li>
-                            <li><strong>${serie.number_of_seasons} temporadas</strong></li>
-                            <li><strong>${serie.genres}</strong></li>
+                            <li><strong>${serie.number_of_seasons} temporada/s</strong></li>
+                            <li><a href="./detail-genres.html?generoId=${serie.genres[0].id}"><strong>${serie.genres[0].name}</strong></a></li>
                         </article>
 
-                        <li class="informacion">${serie.overviwe}</li>
+                        <li class="informacion">${serie.overview}</li>
 
                         <li class="informacion"><strong>Dirección:</strong>${serie.created_y}</li>
                         <li class="lifav"><a class="botonfav" href="./favorite.html"> Agregar a favoritos </a></li>

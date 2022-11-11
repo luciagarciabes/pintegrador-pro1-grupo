@@ -54,7 +54,7 @@ fetch(seriesPopulares)
     let contenido2= ""
     for (let i = 0; i < 5; i++) {
       contenido2+= `<li class="cada_titulo">
-                        <a href="./detail-serie.html?idSerie=${series[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w300${series[i].poster_path}" alt=" ${series[i].name}"   
+                        <a href="./detail-serie.html?idSerie=${series[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt=" ${series[i].name}"   
                             height="250px">
                             <ul class="lista_anidada">
                             <li class="li_piedefoto"> ${series[i].name} </li>
@@ -88,7 +88,7 @@ fetch(loMasVisto)
 
     for (let i = 0; i < 5; i++) {
        contenido3+=  `<li class="cada_titulo">
-                            <a href="./detail-movie.html?idMasVisto=${topRated[i].id}"> <img class="imagenes_home" src="https://image.tmdb.org/t/p/w300${topRated[i].poster_path}" alt="${topRated[i].original_title}"
+                            <a href="./detail-movie.html?idPelicula=${topRated[i].id}"> <img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${topRated[i].poster_path}" alt="${topRated[i].original_title}"
                                 height="250px">
                                 <ul class="lista_anidada">
                                 <li class="li_piedefoto"> ${topRated[i].original_title}</li>
@@ -110,3 +110,23 @@ fetch(loMasVisto)
 
 ME PARECE que vamos a tener que elegir solo un tipo porque sino los nombres de las propiedades cambian y por eso se muestra el titulo en algunas si y en otras no*/
 /* sigo con el mismo problema, porque si pongo top rated solo peliculas, me aparece un error cuando quiero ver el detalle*/ 
+
+
+/* FORMULARIO */
+
+let formulario= document.querySelector(".form_header");
+let campoForm= document.querySelector(".[name=busqueda]");
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if ( campoForm.value =="") {
+        alert("Debes escribir algo")
+    } else {
+        this.submit()
+    }
+
+    
+})
+
+
