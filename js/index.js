@@ -106,27 +106,5 @@ fetch(loMasVisto)
     return error
 })
 
-/*  De donde sacamos los titulos para peliculas y series mas vistos ==> es trending?      conviene? cuando queremos poner el id deberia hacer una diferencia entre las paginas de detalle serie y pelicula? serie mejor poner solo peliculas o solo series?
-
-ME PARECE que vamos a tener que elegir solo un tipo porque sino los nombres de las propiedades cambian y por eso se muestra el titulo en algunas si y en otras no*/
-/* sigo con el mismo problema, porque si pongo top rated solo peliculas, me aparece un error cuando quiero ver el detalle*/ 
-
-
-/* FORMULARIO */
-
-let formulario= document.querySelector(".form_header");
-let campoForm= document.querySelector(".[name=busqueda]");
-
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    if ( campoForm.value =="") {
-        alert("Debes escribir algo")
-    } else {
-        this.submit()
-    }
-
-    
-})
 
 

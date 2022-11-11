@@ -24,11 +24,11 @@ fetch(peliculaDetalle)
                         <article class="flex">
                             <li><strong>${pelicula.release_date}</strong></li>
                             <li><strong>${pelicula.runtime} minutos </strong></li>
-                            <li><strong>${pelicula.genres}</strong></li> .   
+                            <li><strong><a href="./detail-genres.html?generoId=${pelicula.genres[0].id}">${pelicula.genres[0].name}</strong></a></li>    
                         </article>
 
                         <li class="informacion">${pelicula.overview}</li>
-                        <li class="informacion"><strong>Dirección:</strong> ${pelicula.production_companies}</li>
+                        <li class="informacion"><strong>Dirección:</strong> ${pelicula.production_companies[0].name}</li>
                         <li class="lifav"><a class="botonfav" href="./favorite.html"> Agregar a favoritos </a></li>
 
                     </ul>`
@@ -42,22 +42,6 @@ fetch(peliculaDetalle)
     return error
 })
 
-
-fetch()
-.then(function (respuesta) {
-    return respuesta.json()
-    
-})
-.then(function (data) {
-    return data
-    
-})
-.catch(function (error) {
-    return error
-    
-})
-
-/* tengo que hacer otro fetch para las peliculas que vienen desde toprated????????*/
 
 
 
