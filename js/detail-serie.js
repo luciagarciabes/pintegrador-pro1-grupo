@@ -18,8 +18,9 @@ fetch(serieDetalle)
 }
 )
 .then(function (data) {
-    console.log(data);
     let serie= data;
+    console.log(serie);
+    /* COMO PONGO LOS DIRECOTRS */
     let contenido=`<ul>
                         <article class="flex">
                             <li><strong>${serie.first_air_date}</strong></li>
@@ -29,7 +30,7 @@ fetch(serieDetalle)
 
                         <li class="informacion">${serie.overview}</li>
 
-                        <li class="informacion"><strong>Dirección:</strong>${serie.created_y}</li>
+                        <li class="informacion"><strong>Dirección:</strong>${serie.created_by}</li>
                         <li class="lifav"><a class="botonfav" href="./favorite.html"> Agregar a favoritos </a></li>
                     </ul>`
     nombreDetalleSerie.innerText= serie.name;
