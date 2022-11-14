@@ -55,7 +55,7 @@ fetch(urlSeries)
 .then(function (data) {
     let arraySeries= data.results
     let allSeries= ""
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 5; i++) {
         if (arraySeries[i].poster_path != null) {
             allSeries += `<li>
             <a href="./detail-movie.html?idPelicula=${arraySeries[i].id}"> 
