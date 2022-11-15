@@ -19,20 +19,25 @@ fetch(peliculaDetalle)
 })
 .then(function (data) {
     console.log(data)
-    let pelicula= data
+
+   let pelicula= data
+   let infoGeneros= ""
+   let  generos= pelicula.genres
+    for (let i = 0; i < generos.length; i++) {
+        infoGeneros+= ' '+ generos[i]['name']+ ',  '}
+
     let contenido= `<ul>
                         <article class="flex">
                             <li><strong>${pelicula.release_date}</strong></li>
-                            <li><strong>${pelicula.runtime} minutos </strong></li>
-                            <li><strong><a href="./detail-genres.html?generoId=${pelicula.genres[0].id}">${pelicula.genres[0].name}</strong></a></li>    
+                            <li><strong> Duración: ${pelicula.runtime} minutos </strong></li>
+                            <li> <strong> Rating:  ${pelicula.vote_average}</strong> </li> 
                         </article>
 
                         <li class="informacion">${pelicula.overview}</li>
-                        <li class="informacion"><strong>Dirección:</strong> ${pelicula.production_companies[0].name}</li>
-                        <li class="lifav"><a class="botonfav" href="./favorite.html"> Agregar a favoritos </a></li>
+                        <li class="informacion"> <strong> Géneros:    <a  class="generosboton" href="./detail-genres.html?idGenero="> ${infoGeneros} </strong> </a><li> 
+                        <li class="lifav"> <a class="botonfav" href="./favorite.html"> Agregar a favoritos </a> </li>
 
                     </ul>`
-                    /* PROBLEMAS CON LOS GENEROS Y DIRECTORES */
     nombreDetallePelicula.innerText= pelicula.original_title
     textoDetalleMmovie.innerHTML= contenido;
     img.src=`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`
