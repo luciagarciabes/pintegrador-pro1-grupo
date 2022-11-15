@@ -23,7 +23,7 @@ fetch(serieDetalle)
     let infoGeneros=""
     let generos= serie.genres
     for (let i = 0; i < generos.length; i++) {
-        infoGeneros+=' '+ generos[i]['name']+ ',  '   }   
+        infoGeneros+=' '+ generos[i]['name']+ ',  '}   
         
     let contenido=`<ul>
                         <article class="flex">
@@ -33,9 +33,8 @@ fetch(serieDetalle)
                         </article>
 
                         <li class="informacion">${serie.overview}</li>
-
                         <li class="informacion"><strong>Géneros: <a  class="generosboton" href="?idGenero=" > </strong> ${infoGeneros} </a> </li>
-                        <li class="lifav"><a class="botonfav" href="./favorite.html"> Agregar a favoritos </a></li>
+                        <li class="lifav"><a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a> <a class="botonfav botonrecomendacion"> Ver recomendaciones </a></li>
                     </ul>`
     nombreDetalleSerie.innerText= serie.name;
     textoDetalleSerie.innerHTML= contenido;
