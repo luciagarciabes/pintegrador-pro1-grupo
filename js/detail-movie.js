@@ -67,7 +67,7 @@ fetch(urlProveedores)
 .then(function (data2) {
     console.log(data2.results);
 
-    if (data2.results.MX.buy.length < 0) {
+    if (data2.results.MX.buy.length > 0) {
         console.log(data2.results.MX.buy);
         let arrayProveedores = data2.results.MX.buy;
         let contenidoProveedores = ""
