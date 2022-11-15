@@ -11,44 +11,35 @@
 
 
 
-<main>
+<body class="body_result">
+  <header class="header">
+    <article class="logo_header_article">
+      <img class="logoheader" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="Logo">
+    </article>
 
-  <body class="body_result">
-    <header class="header">
-      <article class="logo_header_article">
-        <img class="logoheader" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="Logo">
-      </article>
-
-      <article class="padre2_header">
-        <form class="form_header" action="./search-results.html" method="GET">
-          <input class="inputform" type="text" name="busqueda" value="" placeholder=" Escriba un título...">
-          <button class="botonform">Buscar</button>
-        </form>
+    <article class="padre2_header">
+      <form class="form_header" action="./search-results.html" method="GET">
+        <input class="inputform" type="text" name="busqueda" value="" placeholder=" Escriba un título...">
+        <button class="botonform">Buscar</button>
+      </form>
 
 
-        <!--barra de navegación del header-->
-        <nav class="nav_header">
-          <ul class="lista_nav_header">
-            <li> <a class="linavheader" href="./index.html"> Home </a> </li>
-            <li> <a class="linavheader" href="./favorite.html"> Mis Favoritos</a> </li>
-            <li> <a class="linavheader" href="./ genres.html"> Géneros</a> </li>
+      <!--barra de navegación del header-->
+      <nav class="nav_header">
+        <ul class="lista_nav_header">
+          <li> <a class="linavheader" href="./index.html"> Home </a> </li>
+          <li> <a class="linavheader" href="./favorite.html"> Mis Favoritos</a> </li>
+          <li> <a class="linavheader" href="./ genres.html"> Géneros</a> </li>
 
-          </ul>
-        </nav>
-
-
-      </article>
+        </ul>
+      </nav>
 
 
-
-    </header>
-
-
+    </article>
+  </header>
 
 
-
-
-
+  <main>
     <h2 class="h2resbusq"> </h2>
 
     <section class="seccion_peliculas">
@@ -56,52 +47,55 @@
       <br><br>
 
       <ul class="lista_principal">
-        <!-- los lis de esta lista son las peliculas--> </ul>
-        </section>
+        <!-- los lis de esta lista son las peliculas-->
+      </ul>
+    </section>
 
 
-        <div class="separador">
-          
-        </div>
+    <div class="separador">
+
+    </div>
 
 
-    <h2  id="h2resbusq" class="h2resbusq"> </h2>
+    <h2 id="h2resbusq" class="h2resbusq"> </h2>
 
     <section class="seccion_peliculas">
-          <!--seccion de series-->
-          <br><br>
+      <!--seccion de series-->
+      <br><br>
+
+      <ul id="lista_series" class="lista_principal">
+        <!-- los lis de esta lista son las series-->
+      </ul>
+    </section>
     
-    <ul id="lista_series" class="lista_principal">
-            <!-- los lis de esta lista son las series--> </ul>
-            </section>
-            <div class="separador"></div>
-    
+    <div class="separador"></div>
+  </main>
 
 
 
 
-        <footer class="footer">
-          <article class="logo footer">
-            <img class="logofooter" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="logo footer">
-          </article>
+  <footer class="footer">
+    <article class="logo footer">
+      <img class="logofooter" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="logo footer">
+    </article>
 
-          <article class="nombres_footer">
+    <article class="nombres_footer">
 
-            <ul class="lista_footer">
-              <li class="linombresfooter"> Clara Battaglia</li>
-              <li class="linombresfooter"> Martina Scarfoni</li>
-              <li class="linombresfooter"> Lucia García Bes</li>
-            </ul>
-          </article>
+      <ul class="lista_footer">
+        <li class="linombresfooter"> Clara Battaglia</li>
+        <li class="linombresfooter"> Martina Scarfoni</li>
+        <li class="linombresfooter"> Lucia García Bes</li>
+      </ul>
+    </article>
 
 
-          <article class="logo-tmdb">
-            <img class="img-logo-tmbd" src="./img/TMDB logo.svg" alt="logo-tmdb">
-          </article>
-        </footer>
+    <article class="logo-tmdb">
+      <img class="img-logo-tmbd" src="./img/TMDB logo.svg" alt="logo-tmdb">
+    </article>
+  </footer>
 
-        <script type="text/javascript" src="./js/validacion-formulario.js"></script>
-        <script type="text/javascript" src="./js/search-result.js"></script>
-  </body>
+  <script type="text/javascript" src="./js/validacion-formulario.js"></script>
+  <script type="text/javascript" src="./js/search-result.js"></script>
+</body>
 
 </html>
