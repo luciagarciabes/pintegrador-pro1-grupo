@@ -18,7 +18,7 @@ let estreno= document.querySelector(".estreno")
 let duracion= document.querySelector(".duracion")
 let rating= document.querySelector(".rating")
 let sinopsis= document.querySelector(".sinopsis")
-let generos= document.querySelector(".generos")
+let geneross= document.querySelector(".generos")
 let botonagregarfav= document.querySelector(".botonagregarfav")
 let verrecomendaciones= document.querySelector(".verrecomendaciones")
 
@@ -48,7 +48,7 @@ fetch(peliculaDetalle)
         duracion.innerText= `Duración  ${pelicula.runtime} minutos`;
         rating.innerText= pelicula.vote_average;
         sinopsis.innerText= pelicula.overview;
-        generos.innerHTML= infoGeneros
+        geneross.innerHTML=  ` Generos: ${infoGeneros}`;
         botonagregarfav.innerHTML= `<a class="botonfav" href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> `
         verrecomendaciones.innerHTML= `<a  class="botonfav botonrecomendacion"> Ver recomendaciones </a> `
 
