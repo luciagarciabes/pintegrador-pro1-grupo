@@ -60,9 +60,21 @@
                 <h2 class="nombre-d nombre-detalle-serie"></h2>
             </article>
 
+            <!-- ACA MARTA< ESTE ARTICLE ES EL QUE TENES QUE MODIFICAR-->
             <article class="texto-d texto-detalle-serie">
-               
+                <ul>
+                    <article class="flex">
+                        <li><strong></strong></li>
+                        <li><strong> temporada/s</strong></li>
+                        <li> <strong> Rating:  ${serie.vote_average} </strong> </li>
+                    </article>
+
+                    <li class="informacion"></li>
+                    <li class="informacion"><strong>Géneros: <a  class="generosboton" href="?idGenero=" > </strong> ${infoGeneros} </a> </li>
+                    <li class="lifav"><a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a> <a class="botonfav botonrecomendacion"> Ver recomendaciones </a></li>
+                </ul>   
             </article>
+            
         </section>
         
 

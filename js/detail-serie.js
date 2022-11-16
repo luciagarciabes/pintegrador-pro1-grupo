@@ -23,9 +23,13 @@ fetch(serieDetalle)
     let infoGeneros=""
     let generos= serie.genres
     for (let i = 0; i < generos.length; i++) {
-        infoGeneros+=' '+ generos[i]['name']+ ',  '}   
+        infoGeneros+=`<a class="generosboton" href="./detail-genres.html?idGenero=${generos[i].id}"> ${generos[i].name}</a>` }   
         
-    let contenido=`<ul>
+        nombreDetalleSerie.innerText= serie.name;
+        img.src= `https://image.tmdb.org/t/p/w500${serie.poster_path}`
+
+
+    /*let contenido=`<ul>
                         <article class="flex">
                             <li><strong>${serie.first_air_date}</strong></li>
                             <li><strong>${serie.number_of_seasons} temporada/s</strong></li>
@@ -36,9 +40,10 @@ fetch(serieDetalle)
                         <li class="informacion"><strong>Géneros: <a  class="generosboton" href="?idGenero=" > </strong> ${infoGeneros} </a> </li>
                         <li class="lifav"><a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a> <a class="botonfav botonrecomendacion"> Ver recomendaciones </a></li>
                     </ul>`
-    nombreDetalleSerie.innerText= serie.name;
-    textoDetalleSerie.innerHTML= contenido;
-    img.src= `https://image.tmdb.org/t/p/w500${serie.poster_path}`
+                    textoDetalleSerie.innerHTML= contenido;*/
+    
+    
+    
 })
 .catch(function (error) {
     return error

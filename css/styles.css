@@ -12,9 +12,16 @@ body {
     background-color: rgb(0, 0, 1);
 }
 
-.botonrecomendacion{
-    margin-left: 20px;
+.verrecomendaciones{
+   margin-top: 30px;
 }
+
+.imagenesproveedores{
+    height: 150px;
+    width:150px
+}
+
+
 
 .padre2_header {
     width: 100%;
