@@ -424,12 +424,21 @@ a {
     margin: 0px;
 }
 
+.article_plataformas{
+    display: flex;
+    flex-direction: column;
+}
+
 .h2resbusq {
     color: white;
     margin-left: 10px;
     background-color: rgba(128, 128, 128, 0.139);
     padding: 10px;
     margin-top: 50px;
+}
+
+.proveedoresh3{
+    margin-left: 40px;
 }
 
 .generosboton{
