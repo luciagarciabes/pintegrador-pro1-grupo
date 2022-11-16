@@ -16,7 +16,7 @@ let estreno = document.querySelector(".estreno")
 let temporada = document.querySelector(".temporada")
 let rating = document.querySelector(".rating")
 let extra = document.querySelector(".extra")
-let generos = document.querySelector(".generos")
+let geneross = document.querySelector(".generos")
 let botonagregarfav = document.querySelector(".botonagregarfav")
 let botonrecomendacion = document.querySelector(".botonrecomendacion")
 
@@ -36,10 +36,10 @@ fetch(serieDetalle)
         nombreDetalleSerie.innerText= serie.name;
         img.src= `https://image.tmdb.org/t/p/w500${serie.poster_path}`
         estreno.innerText = serie.first_air_date;
-        temporada.innerText = serie.number_of_seasons;
+        temporada.innerText = `temporadas ${serie.number_of_seasons}`
         rating.innerText = serie.vote_average;
         extra.innerText = serie.overview;
-        generos.innerHTML = `Géneros: ${infoGeneros}`
+        geneross.innerHTML = `Géneros: ${infoGeneros}`
         botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a>`
         botonrecomendacion.innerHTML = `<a class="botonfav botonrecomendacion"> Ver recomendaciones </a>`
 
