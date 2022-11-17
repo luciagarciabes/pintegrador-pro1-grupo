@@ -493,6 +493,10 @@ a {
 
 }
 
+.ulverrecomendaciones{
+    display: none;
+}
+
 .h2generos {
     text-align: center;
     color: rgb(180, 173, 173);
