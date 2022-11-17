@@ -62,7 +62,6 @@ fetch(peliculaDetalle)
 fetch(urlProveedores)
 .then(function (respuesta) {
     return respuesta.json()
-
 })
 .then(function (data2) {
     console.log(data2.results);
@@ -91,7 +90,7 @@ fetch(urlProveedores)
 })
 
 
-/* if data.results.MX undefined o if MX != "" */
+
 
 
 
