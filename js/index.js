@@ -63,7 +63,7 @@ fetch(seriesPopulares)
 
                             </ul> </a>
                     </li>`
-                    /* no sabemos donde encontrar el link para poner el path de las fotos #######*/
+
     }
     lista_principal_series.innerHTML= contenido2
     return data

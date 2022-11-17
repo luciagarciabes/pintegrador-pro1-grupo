@@ -3,7 +3,7 @@ let qs= location.search;
 let qsObj= new URLSearchParams(qs);
 let idSerie= qsObj.get('idSerie');
 
-/* api key y el endpoint de detalle de series*/
+/* api key y el endpoint de detalle de series y proveedores*/
 let api_key = "a999f9c45003fc79555aea4968543ddf";
 let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
 
@@ -20,6 +20,7 @@ let geneross = document.querySelector(".generos")
 let botonagregarfav = document.querySelector(".botonagregarfav")
 let botonrecomendacion = document.querySelector(".botonrecomendacion")
 
+/*Fetch del detalle serie  */
 fetch(serieDetalle)
 .then(function (respuesta) {
     return respuesta.json()
@@ -42,23 +43,7 @@ fetch(serieDetalle)
         geneross.innerHTML = `Géneros: ${infoGeneros}`
         botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a>`
         botonrecomendacion.innerHTML = `<a class="botonfav botonrecomendacion"> Ver recomendaciones </a>`
-
-
-    /*let contenido=`<ul>
-                        <article class="flex">
-                            <li><strong>${serie.first_air_date}</strong></li>
-                            <li><strong>${serie.number_of_seasons} temporada/s</strong></li>
-                            <li> <strong> Rating:  ${serie.vote_average} </strong> </li>
-                        </article>
-
-                        <li class="informacion">${serie.overview}</li>
-                        <li class="informacion"><strong>Géneros: <a  class="generosboton" href="?idGenero=" > </strong> ${infoGeneros} </a> </li>
-                        <li class="lifav"><a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a> <a class="botonfav botonrecomendacion"> Ver recomendaciones </a></li>
-                    </ul>`
-                    textoDetalleSerie.innerHTML= contenido;*/
-    
-    
-    
+  
 })
 .catch(function (error) {
     return error

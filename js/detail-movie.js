@@ -3,7 +3,7 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let idPelicula = qsObj.get('idPelicula')
 
-/* api key y el endpoint de detalle de peliculas*/
+/* api key y el endpoint de detalle de peliculas y proveedores*/
 let api_key = "a999f9c45003fc79555aea4968543ddf";
 let peliculaDetalle = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${api_key}&language=en-US`
 let urlProveedores = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${api_key}`
@@ -27,7 +27,7 @@ let recomendaciones = document.querySelector(".verrecomendaciones")
 
 
 
-
+/*Fetch de detalle peliculas */
 fetch(peliculaDetalle)
     .then(function (respuesta) {
         return respuesta.json()
@@ -51,27 +51,6 @@ fetch(peliculaDetalle)
         geneross.innerHTML=  ` Generos: ${infoGeneros}`;
         botonagregarfav.innerHTML= `<a class="botonfav" href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> `
         verrecomendaciones.innerHTML= `<a  class="botonfav botonrecomendacion"> Ver recomendaciones </a> `
-
-
-      /* let  contenido = `<ul>
-                        <article class="flex">
-                            <li><strong>${pelicula.release_date}</strong></li>
-                            <li><strong> Duración: ${pelicula.runtime} minutos </strong></li>
-                            <li> <strong> Rating:  ${pelicula.vote_average}</strong> </li> 
-                        </article>
-
-                        <li class="informacion">${pelicula.overview}</li>
-                        <li class="informacion"> <strong> Géneros:    <a  class="generosboton" href="./detail-genres.html?idGenero="> ${infoGeneros} </strong> </a><li> 
-                        <li class="lifav"> <a class="botonfav" href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> <a class="botonfav botonrecomendacion"> Ver recomendaciones </a> </li>
-                        
-                    </ul>`
-
-
-        nombreDetallePelicula.innerText = pelicula.original_title
-        img.src = `https://image.tmdb.org/t/p/w500${pelicula.poster_path}`
-        textoDetalleMmovie.innerHTML = contenido;*/
-       
-
 
     })
     .catch(function (error) {

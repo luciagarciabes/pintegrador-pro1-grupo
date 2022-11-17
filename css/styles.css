@@ -461,6 +461,11 @@ a {
 
 }
 
+.h2nohaygenero{
+    color: white;
+    
+}
+
 /* generos */
 .sectiongeneral {
     display: flex;
