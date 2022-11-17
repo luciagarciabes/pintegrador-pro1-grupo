@@ -1,59 +1,74 @@
-let qs = location.search
+/* Capturo la qs, api key*/
+let qs = location.search;
 let qsObj = new URLSearchParams(qs);
-let idPelicula = qsObj.get("idPelicula")
-let idSerie= qsObj.get('idSerie');
-
-
+let idGenero = qsObj.get('idGenero');
 let api_key = "a999f9c45003fc79555aea4968543ddf";
-let pelicula = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${api_key}&language=en-US`
-let urlProveedores = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${api_key}`
-let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
 
-/*generos peliculas*/
+console.log(idGenero);
 
-fetch(pelicula)
-    .then(function (respuesta) {
-        return respuesta.json();
-    })
-    .then(function (data) {
-        if (data.results.length > 0) {
-            let arrayPeliculas = data.results
-            let allPeliculas = ""
-            for (let i = 0; i < 5; i++) {
-                allPeliculas += 
-                resultados.innerHTML = allPeliculas;
-            }
-            
-        } else {
-            h2resbusq.innerText = ` No hay resultados para su búsqueda...`
+/* Endpoints*/ 
+let urlPeliculas= `https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idGenero}&with_watch_monetization_types=flatrate`
 
+let urlSeries= `https://api.themoviedb.org/3/discover/tv?api_key=${api_key}&language=en-US&sort_by=popularity.desc&page=1&timezone=America%2FNew_York&with_genres=${idGenero}&include_null_first_air_dates=false&with_watch_monetization_types=flatrate&with_status=0&with_type=0`
+
+
+/* Capturo elementos*/
+let detallegenerospeliculas= document.querySelector(".detallegenerospeliculas");
+let detallegenerosseries= document.querySelector(".detallegenerosseries");
+let h2Peliculas= document.querySelector(".h2dgpeliculas");
+let h2Series= document.querySelector(".h2dgseries");
+
+
+/* Fetch generos peliculas*/
+fetch(urlPeliculas)
+.then(function (respuesta) {
+    return respuesta.json()
+    
+})
+.then(function (data) {
+    console.log(data.results)
+    peliculas= data.results
+    if (peliculas =! null){
+        contenido=""
+        for (let i = 0; i < 5; i++) {
+            contenido+= ` <li>
+            <a href="./detail-movie.html?idPelicula=${peliculas[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}"
+                    alt="${peliculas[i].title}" height="250px">
+                <ul class="lista_anidada">
+                    <li class="li_piedefoto">${peliculas[i].title} </li>
+                    <li class="li_piedefoto"> Estreno: ${peliculas[i].release_date}</li>
+                    <li class="vermas"> Ver más </li>
+            </a> </ul>
+    </li>`   
         }
+    detallegenerospeliculas.innerHTML= contenido;
 
-    })
-    .catch(function (error) {
-        return error
-    })
+    } else {
 
-    /*generos series*/
-    fetch(serie)
-    .then(function (respuesta) {
-        return respuesta.json();
-    })
-    .then(function (data) {
-        if (data.results.length > 0) {
-            let arrayserie = data.results
-            let allserie = ""
-            for (let i = 0; i < 5; i++) {
-                allPeliculas += 
-                resultados.innerHTML = allPeliculas;
-            }
-            
-        } else {
-            h2resbusq.innerText = ` No hay resultados para su búsqueda...`
+    }
+   
 
-        }
+   
+    
+})
+.catch(function (error) {
+    return error
+    
+})
 
-    })
-    .catch(function (error) {
-        return error
-    })
+ /*generos series*/
+
+ fetch(urlSeries)
+ .then(function (respuesta) {
+     return respuesta.json()
+     
+ })
+ .then(function (data) {
+     console.log(data)
+     
+ })
+ .catch(function (error) {
+     return error
+     
+ })
+ 
