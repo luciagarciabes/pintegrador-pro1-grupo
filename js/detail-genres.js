@@ -28,8 +28,8 @@ fetch(urlPeliculas)
          let peliculas = data.results;
          if (peliculas.length> 0){
          let contenido = ""
-         for (let i = 1; i < 6; i++) {
-                contenido += ` <li>
+         for (let i = 0; i < 5; i++) {
+                contenido += ` <li class="cada_titulo">
                                     <a href="./detail-movie.html?idPelicula=${peliculas[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}"
                                             alt="${peliculas[i].title}" height="250px">
                                         <ul class="lista_anidada">
@@ -40,7 +40,7 @@ fetch(urlPeliculas)
                             </li>`
             };
             listagenerospeliculas.innerHTML= contenido;
-        }else {
+        } else {
             listagenerospeliculas.innerHTML= `<h2 class="informacion h2nohaygenero"> No hay peliculas para el género seleccionado</h2>`
 
         }
