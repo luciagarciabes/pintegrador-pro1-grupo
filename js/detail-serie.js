@@ -5,8 +5,8 @@ let idSerie = qsObj.get('idSerie');
 
 /* api key y el endpoint de detalle de series y proveedores*/
 let api_key = "a999f9c45003fc79555aea4968543ddf";
-let serieDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
-let urlRecomendaciones = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`;
+let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
+let urlProveedores1 = `https://api.themoviedb.org/3/watch/providers/tv${idSerie}?api_key=${api_key}&language=en-US`
 
 /* Capturo elementos */
 let img = document.querySelector(".img-detalle-titulos");
