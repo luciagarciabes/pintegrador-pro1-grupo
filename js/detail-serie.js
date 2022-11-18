@@ -57,7 +57,7 @@ fetch(serieDetalle)
     )
 
 
-/* Proveedores series mis cambios */
+/* Proveedores series mis cambios . */
 fetch(urlProveedores)
 .then(function (respuesta) {
     return respuesta.json()
