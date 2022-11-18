@@ -20,9 +20,9 @@ if (favoritosPeliculas== null || favoritosPeliculas.length==0) {
 
 } else{
     for (let i = 0; i < favoritosPeliculas.length; i++) {
-        let url= `https://api.themoviedb.org/3/movie/${favoritosPeliculas[i]}?api_key=${api_key}&language=en-US`
+        let urlPelis= `https://api.themoviedb.org/3/movie/${favoritosPeliculas[i]}?api_key=${api_key}&language=en-US`
 
-        fetch(url)
+        fetch(urlPelis)
         .then(function (respuesta) {
             return respuesta.json()
     
@@ -50,6 +50,23 @@ if (favoritosPeliculas== null || favoritosPeliculas.length==0) {
 }
 
 /* Series  */
+let series =""
+if (favoritosSeries == null || favoritosSeries.length== 0){
+    let urlSeries= `https://api.themoviedb.org/3/tv${favoritosSeries[i]}?api_key=${api_key}&language=en-US`
+
+    fetch(urlSeries)
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data) {
+        console.log(data)
+        series += 
+    })
+    .catch(function (error) {
+    
+    })
+}
+
 
 
 
