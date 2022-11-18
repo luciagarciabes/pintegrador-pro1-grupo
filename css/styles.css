@@ -681,6 +681,10 @@ a {
         padding: 0px;
         align-items: center;
         margin-top: 0px;
+    }}
+    
+    .ulverrecomendacionesSeries{
+        display: none;
     }
 
     .h2_dg {
@@ -741,7 +745,7 @@ a {
     }
 
     .titulofav {
-        margin-block: 30px;
+        margin-left: 10px;
         padding-top: 30px;
 
     }
@@ -781,4 +785,3 @@ a {
     }
 
 
-}

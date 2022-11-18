@@ -31,7 +31,7 @@ if (favoritosPeliculas== null || favoritosPeliculas.length==0) {
             console.log(data);
 
             peliculasFavs+= `<li class="cada_titulo">
-                                    <a href="./detail-serie.html?idSerie=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.title}"   
+                                    <a href="./detail-movie.html?idPelicula=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.title}"   
                                         height="250px">
                                         <ul class="lista_anidada">
                                             <li class="li_piedefoto"> ${data.title} </li>

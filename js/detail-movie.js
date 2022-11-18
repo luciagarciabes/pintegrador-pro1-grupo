@@ -53,7 +53,6 @@ fetch(peliculaDetalle)
         rating.innerText = ` Rating: ${pelicula.vote_average}`;
         sinopsis.innerText = pelicula.overview;
         geneross.innerHTML = ` Generos: ${infoGeneros}`;
-        botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> `
         verrecomendaciones.innerHTML = `<a  class="botonfav botonrecomendacion"> Ver recomendaciones </a> `
 
     })

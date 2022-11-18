@@ -91,7 +91,7 @@ fetch(urlProveedores)
 
 
 
-let contenidoRecomendaciones = "";
+
 /* Fetch del Ver recomendaciones */
 fetch(urlRecomendaciones)
     .then(function (respuesta) {
@@ -101,7 +101,8 @@ fetch(urlRecomendaciones)
     .then(function (data) {
         console.log(data.results)
         let seriesRecomendadas = data.results;
-        
+        let contenidoRecomendaciones = "";
+
 
         for (let i = 0; i < 4; i++) {
             contenidoRecomendaciones += `<li class="cada_titulo">
