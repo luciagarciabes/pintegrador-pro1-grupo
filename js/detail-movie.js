@@ -149,6 +149,33 @@ botonrecomendacion.addEventListener('click', function(e) {
 })
 
 
+/* Favoritos*/ 
+let favoritosPeliculas= [];
+let recuperoStorage= localStorage.getItem("favoritosPeliculas")
+
+if (recuperoStorage != null) {
+    favoritosPeliculas= JSON.parse(recuperoStorage)
+}
+
+if (favoritosPeliculas.includes(idPelicula)) {
+    botonagregarfav.innerText= "Quitar de favoritos"
+}
+
+botonagregarfav.addEventListener("click", function (e) {
+    e.preventDefault()
+    if (favoritosPeliculas.includes(idPelicula)) {
+        let indice= favoritosPeliculas.indexOf(idPelicula)
+        favoritosPeliculas.splice(indice, 1)
+        botonagregarfav.innerText= "Agregar a favoritos"
+    } else {
+        favoritosPeliculas.push(idPelicula)
+        botonagregarfav.innerText= "Quitar de favoritos"
+    }
+    let favToString= JSON.stringify(favoritosPeliculas)
+    localStorage.setItem("favoritosPeliculas", favToString)
+    
+})
+
 
 
 

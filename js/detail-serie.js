@@ -147,5 +147,35 @@ console.log("CLIC")
 
 
 
+/* Favoritos*/
+
+let favoritosSeries= [];
+let recuperoStorage= localStorage.getItem("favoritosSeries");
+
+if (recuperoStorage != null) {
+    favoritosSeries= JSON.parse(recuperoStorage)
+}
+
+if (favoritosSeries.includes(idSerie)) {
+    botonagregarfav.innerText= "Quitar de favoritos"
+}
+
+botonagregarfav.addEventListener("click", function (e) {
+    e.preventDefault()
+    if (favoritosSeries.includes(idSerie)) {
+        let indice= favoritosSeries.indexOf(idSerie)
+        favoritosSeries.splice(indice, 1)
+        botonagregarfav.innerText= "Agregar a favoritos"
+    } else {
+        favoritosSeries.push(idSerie)
+        botonagregarfav.innerText= "Quitar de favoritos"
+    }
+
+    let favToString= JSON.stringify(favoritosSeries)
+    localStorage.setItem("favoritosSeries",favToString)
+    
+})
+
+
 
 
