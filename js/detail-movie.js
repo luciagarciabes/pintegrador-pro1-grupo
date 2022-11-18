@@ -29,6 +29,8 @@ let recomendaciones = document.querySelector(".verrecomendaciones")
 
 
 
+
+
 /*Fetch de detalle peliculas */
 fetch(peliculaDetalle)
     .then(function (respuesta) {
@@ -128,33 +130,24 @@ fetch(urlRecomendaciones)
     })
 
 
-/*if (ulverrecomendaciones.style.display == 'none') {
-    botonrecomendacion.addEventListener('click', function() {
-        ulverrecomendaciones.style.display= 'flex'
-        botonrecomendacion.innerText= "Ocultar recomendaciones" })
-}else {
-    botonrecomendacion.addEventListener('click', function() {
-        ulverrecomendaciones.style.display= 'none'
-        botonrecomendacion.innerText= "Ver recomendaciones"
-        
-    })
-}*/
 
-let muestraRecomendaciones= false
 
-if(muestraRecomendaciones== false) {botonrecomendacion.addEventListener('click', function () {
-    ulverrecomendaciones.style.display = 'flex'
-    botonrecomendacion.innerText = "Ocultar recomendaciones"
-    muestraRecomendaciones= true
-})} else if (muestraRecomendaciones== true) {
-    botonrecomendacion.addEventListener('click', function() {
-        ulverrecomendaciones.style.display= 'none'
-        botonrecomendacion.innerText= "Ver recomendaciones"
-        muestraRecomendaciones= false})
-}
-    
+    /* Seccion de recomendaciones*/
+let muestraRecomendaciones= false;
 
-/*NO PUEDO HACER QUE DESAPAREZCA CUANDO VUELVE A TOCAR EL BOTON */
+botonrecomendacion.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if (muestraRecomendaciones) {
+        ulverrecomendaciones.style.display = 'none';
+        botonrecomendacion.innerText = 'Ver recomendaciones'
+        muestraRecomendaciones = false;
+    } else {
+        ulverrecomendaciones.style.display = 'flex';
+        botonrecomendacion.innerText = 'Ocultar recomendaciones'
+        muestraRecomendaciones = true;
+    }
+})
 
 
 
