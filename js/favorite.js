@@ -16,6 +16,7 @@ let pNoHayFavsSeries = document.querySelector(".nohayfavsseries")
 /*Peliculas */
 let peliculasFavs = "";
 if (favoritosPeliculas == null || favoritosPeliculas.length == 0) {
+    console.log("NO HAY pelis")
     pNoHayFavsPelis.innerHTML = `<p class="informacion h2nohaygenero"> No hay películas en favoritos </p>`
 
 } else {
@@ -55,8 +56,8 @@ if (favoritosSeries == null || favoritosSeries.length == 0) {
     pNoHayFavsSeries.innerHTML = `<p class="informacion h2nohaygenero"> No hay series en favoritos </p>`
 
 } else {
-    for (let i = 0; i < favoritosSeries.lenght; i++) {
-        let urlSeries = `https://api.themoviedb.org/3/tv${favoritosSeries[i]}?api_key=${api_key}&language=en-US`
+    for (let i = 0; i < favoritosSeries.length; i++) {
+        let urlSeries = `https://api.themoviedb.org/3/tv/${favoritosSeries[i]}?api_key=${api_key}&language=en-US`
 
         fetch(urlSeries)
             .then(function (respuesta) {
