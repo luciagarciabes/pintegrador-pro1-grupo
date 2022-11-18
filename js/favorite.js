@@ -5,8 +5,8 @@ let recuperoStorageSeries = localStorage.getItem("favoritosSeries");
 let favoritosPeliculas= JSON.parse(recuperoStoragePeliculas);
 let favoritosSeries= JSON.parse(recuperoStorageSeries);
 
-let listaPeliculas= document.querySelector("#ulFavsPeliculas");
-let listaSeries= document.querySelector("#ulFavsSeries");
+let listaPeliculas= document.querySelector(".ulFavsPeliculas");
+let listaSeries= document.querySelector(".ulFavsSeries");
 let pNoHayFavsPelis= document.querySelector(".nohayfavspelis")
 let pNoHayFavsSeries= document.querySelector(".nohayfavsseries")
 
@@ -60,7 +60,19 @@ if (favoritosSeries == null || favoritosSeries.length== 0){
     })
     .then(function (data) {
         console.log(data)
-        series += 
+        series += `<li class="cada_titulo">
+                            <a href="./detail-serie.html?idSerie=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.original_title}"   
+                            height="250px">
+                                <ul class="lista_anidada">
+                                    <li class="li_piedefoto"> ${data.original_title} </li>
+                                    <li class="li_piedefoto">Estreno: ${data.release_date} </li>
+                                    <li class="vermas"> Ver más </li>
+
+                                </ul> </a>
+                    </li>`
+        listaSeries.innerHTML= series;
+
+
     })
     .catch(function (error) {
     
