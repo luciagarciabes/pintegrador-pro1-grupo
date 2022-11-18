@@ -1,6 +1,10 @@
 /*   CSS del Index */
 /*header*/
 
+.w-100{
+    width: 100%;
+}
+
 body {
     background-color: rgb(15, 9, 19);
     font-family: 'Overpass', sans-serif;
@@ -749,6 +753,21 @@ a {
         padding-top: 30px;
 
     }
+    .listaFavs{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-right: 950px;
+    }
+    .h2fav{
+        margin-left: 10px;
+        font-size: 40px;
+    }
+   
+    .nohayfavspelis{
+        
+    }
+    
 
     .lista_favoritos2 {
         padding: 30px 15px;
