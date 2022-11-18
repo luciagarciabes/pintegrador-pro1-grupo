@@ -64,20 +64,11 @@ fetch(peliculaDetalle)
 
 /* Fetch para los proveedores*/
 fetch(urlProveedores)
-<<<<<<< HEAD
-    .then(function (respuesta) {
-        return respuesta.json()
-
-    })
-    .then(function (data2) {
-    /* console.log(data2.results)*/;
-=======
 .then(function (respuesta) {
     return respuesta.json()
 })
 .then(function (data2) {
     console.log(data2.results);
->>>>>>> 58bfc7f (proveedores series no)
 
         if (data2.results.MX != undefined) {
             console.log(data2.results.MX.buy);

@@ -6,7 +6,8 @@ let idSerie = qsObj.get('idSerie');
 /* api key y el endpoint de detalle de series y proveedores*/
 let api_key = "a999f9c45003fc79555aea4968543ddf";
 let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
-let urlProveedores1 = `https://api.themoviedb.org/3/watch/providers/tv${idSerie}?api_key=${api_key}&language=en-US`
+let urlProveedores = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
+urlRecomendaciones=`https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
 
 /* Capturo elementos */
 let img = document.querySelector(".img-detalle-titulos");
@@ -21,6 +22,7 @@ let geneross = document.querySelector(".generos")
 let botonagregarfav = document.querySelector(".botonagregarfav")
 let botonrecomendacion = document.querySelector(".botonrecomendacion")
 let ulverrecomendacionesSeries = document.querySelector(".ulverrecomendacionesSeries")
+let listaPlataformas = document.querySelector(".lista_plataformas")
 
 
 /*Fetch del detalle serie  */
@@ -55,11 +57,42 @@ fetch(serieDetalle)
     )
 
 
+/* Proveedores series */
+fetch(urlProveedores)
+.then(function (respuesta) {
+    return respuesta.json()
+})
+.then(function (data) {
+    console.log(data.results);
+
+    if (data.results.MX != undefined) {
+        console.log(data.results.MX.buy);
+        let arrayProveedores = data.results.MX.buy;
+        let contenidoProveedores = ""
+
+        for (let i = 0; i < arrayProveedores.length; i++) {
+            contenidoProveedores += `<li> 
+                                        <h3> ${arrayProveedores[i].provider_name}</h3>
+                                        <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
+                                    </li>` 
+            
+        }
+        listaPlataformas.innerHTML = contenidoProveedores
+    } else {
+        listaPlataformas.innerText = "no hay proveedores";
+    }
+
+})
+.catch(function (error) {
+    return error
+})
 
 
 
 
-/*Fetch del Ver recomendaciones  */
+
+
+/* Fetch del Ver recomendaciones */
 fetch(urlRecomendaciones)
     .then(function (respuesta) {
         return respuesta.json()
@@ -90,5 +123,5 @@ fetch(urlRecomendaciones)
     })
 
 
-    /* NO SE ME MUESTRA LA SECCION DE RECOMENDACIONES */
+
 
