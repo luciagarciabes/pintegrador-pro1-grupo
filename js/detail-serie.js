@@ -47,7 +47,7 @@ fetch(serieDetalle)
         rating.innerText = ` Rating: ${serie.vote_average}`;
         extra.innerText = serie.overview;
         geneross.innerHTML = `Géneros: ${infoGeneros}`
-        botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a>`
+        /*botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a>`*/
        
 
     })

@@ -53,8 +53,7 @@ fetch(peliculaDetalle)
         rating.innerText = ` Rating: ${pelicula.vote_average}`;
         sinopsis.innerText = pelicula.overview;
         geneross.innerHTML = ` Generos: ${infoGeneros}`;
-        verrecomendaciones.innerHTML = `<a  class="botonfav botonrecomendacion"> Ver recomendaciones </a> `
-
+       
     })
     .catch(function (error) {
         return error

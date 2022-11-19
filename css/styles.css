@@ -69,7 +69,9 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
-
+.listagenerospeliculas {
+    display: flex;
+}
 
 
 .nav_header {
@@ -178,7 +180,7 @@ body {
 }
 
 .cada_titulo{
-    width: 14%;
+    width: 16%;
 }
 
 
@@ -412,6 +414,7 @@ a {
 
 .listaFavs{
     display: flex;
+    flex-direction: column;
 }
 
 
@@ -541,7 +544,7 @@ a {
 }
 .listaFavs{
     display: flex;
-    flex-direction: column;
+    /*flex-direction: column;*/
     margin-left: 30px;
     margin-right: 950px;
 }
@@ -714,7 +717,7 @@ a {
         width: 100%;
         padding-left: 10px;
         margin-top: 50px;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .h2_dg {
@@ -724,9 +727,7 @@ a {
         margin-left: 20px;
     }
 
-    .seccion_dg {
-        height: 1600px;
-    }
+    
 
     .maind {
         padding: 30px 15px;
@@ -780,10 +781,9 @@ a {
     }
 
     .genero {
-        padding-left: 15px;
+        padding-left: 1px;
         margin-bottom: 30px;
         justify-content: center;
-        width: 100%;
         margin-top: 50px;
         flex-direction: column;
 
@@ -792,7 +792,6 @@ a {
     .sectiongeneral {
         padding-top: 0px;
         display: flex;
-        flex-direction: column;
         align-items: center;
     }
 
@@ -801,4 +800,5 @@ a {
         align-items: center;
     }
 
+    
 
