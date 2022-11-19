@@ -539,6 +539,16 @@ a {
 .lifav {
     margin-top: 20px;
 }
+.listaFavs{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 950px;
+}
+.lifav {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
 
 @media(max-width: 420px) {
     .header {
@@ -729,10 +739,6 @@ a {
         font-size: 15px;
     }
 
-    .lifav {
-        margin-top: 20px;
-        margin-bottom: 25px;
-    }
 
     .lista_favoritos {
         padding: 30px 15px;
@@ -753,12 +759,7 @@ a {
         padding-top: 30px;
 
     }
-    .listaFavs{
-        display: flex;
-        flex-direction: column;
-        margin-left: 30px;
-        margin-right: 950px;
-    }
+    
     .h2fav{
         margin-left: 10px;
         font-size: 40px;
