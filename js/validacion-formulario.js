@@ -2,6 +2,7 @@
 
 let formulario= document.querySelector(".form_header");
 let campoForm= document.querySelector("[name=busqueda]");
+let loader= document.querySelector(".loader")
 
 formulario.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -13,7 +14,13 @@ formulario.addEventListener('submit', function(event) {
     }else {
         this.submit()
     }
-
-    
 })
 
+
+/* Loader*/
+window.addEventListener("load", function (e) {
+    this.setTimeout(function () {
+        loader.style.display= "none"
+        
+    },1000);   
+})

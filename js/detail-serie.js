@@ -71,7 +71,7 @@ fetch(urlProveedores)
         let contenidoProveedores = ""
 
         for (let i = 0; i < arrayProveedores.length; i++) {
-            contenidoProveedores += `<li> 
+            contenidoProveedores += `<li class="liroveedor"> 
                                         <h3> ${arrayProveedores[i].provider_name}</h3>
                                         <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
                                     </li>` 
