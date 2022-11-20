@@ -9,6 +9,7 @@ let peliculaDetalle = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=
 let urlProveedores = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${api_key}`
 let urlRecomendaciones = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let urlReviews = `https://api.themoviedb.org/3/movie/${idPelicula}/reviews?api_key=${api_key}&language=en-US&page=1`
+let urlTrailer = `https://api.themoviedb.org/3/movie/${idPelicula}/videos?api_key=${api_key}&language=en-US`
 
 /* Capturo elementos*/
 let img = document.querySelector(".img-detalle-titulos");
@@ -27,12 +28,13 @@ let botonrecomendacion = document.querySelector(".botonrecomendacion")
 let listaPlataformas = document.querySelector(".lista_plataformas")
 let recomendaciones = document.querySelector(".verrecomendaciones")
 let seccionReviews= document.querySelector(".seccionReviews")
+let seccionTrailer = document.querySelector(".seccionTrailer")
 
 
 
 
 
-/*Fetch de detalle peliculas */
+/* Fetch de detalle peliculas */
 fetch(peliculaDetalle)
     .then(function (respuesta) {
         return respuesta.json()
@@ -61,7 +63,7 @@ fetch(peliculaDetalle)
     })
 
 
-/* Fetch para los proveedores*/
+/* Fetch para los proveedores */
 fetch(urlProveedores)
 .then(function (respuesta) {
     return respuesta.json()
@@ -95,7 +97,7 @@ fetch(urlProveedores)
 
 
 
-/* Fetch para Ver recomendaciones*/
+/* Fetch para Ver recomendaciones */
 fetch(urlRecomendaciones)
     .then(function (respuesta) {
         return respuesta.json()
@@ -130,7 +132,7 @@ fetch(urlRecomendaciones)
 
 
 
-    /* Seccion de recomendaciones*/
+    /* Seccion de recomendaciones */
 let muestraRecomendaciones= false;
 
 botonrecomendacion.addEventListener('click', function(e) {
@@ -176,19 +178,15 @@ botonagregarfav.addEventListener("click", function (e) {
 })
 
 
-
-
-
-/*Reviews*/
-
+/* Sección Reviews */
  fetch(urlReviews)
  .then(function (respuesta) {
      return respuesta.json()
  })
  .then(function (data) {
     console.log(data.results)
-   let  pelisReviews = data.results;
-   let infoReviews=""
+    let pelisReviews = data.results;
+    let infoReviews=""
     for (let i = 0; i <3; i++) {
         infoReviews+= ` <article class="reviews">
                             <h2 class="informacion"> ${pelisReviews[i].author} </h2>
@@ -199,11 +197,34 @@ botonagregarfav.addEventListener("click", function (e) {
     seccionReviews.innerHTML= infoReviews;
     
  })
-    
+
  .catch(function (error) {
      return error
  })
 
 
+/* Sección Videos */
+fetch(urlTrailer)
+.then(function (respuesta) {
+    return respuesta.json()
+})
+.then(function (data) {
+    console.log(data.results)
 
+    let pelisTrailer = data.results;
+    let infoTrailer = ""
+
+    if (pelisTrailer != undefined || pelisTrailer != null || pelisTrailer.length != 0) {
+
+
+        seccionTrailer.innerHTML = infoTrailer
+
+    } else {
+        seccionTrailer.innerText = <p class="informacion">"No hay Trailer disponible"</p>
+    }
+
+})
+.catch(function (error) {
+    
+})
 
