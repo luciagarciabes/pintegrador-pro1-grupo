@@ -9,8 +9,15 @@ formulario.addEventListener('submit', function(event) {
 
     if ( campoForm.value =="") {
         alert("Debes escribir algo")
+        campoForm.addEventListener('focus', function () {
+            campoForm.value= ""  
+        })
     } else if (campoForm.value.length <3){
         alert("Su búsqueda debe tener más de tres caracteres")
+        campoForm.addEventListener('focus', function () {
+            campoForm.value= ""  
+        })
+
     }else {
         this.submit()
     }
@@ -24,3 +31,5 @@ window.addEventListener("load", function (e) {
         
     },1000);   
 })
+
+
