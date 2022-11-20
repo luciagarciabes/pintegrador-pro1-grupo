@@ -216,7 +216,7 @@ fetch(urlTrailer)
             seccionTrailer.innerHTML = infoTrailer
 
         } else {
-            seccionTrailer.innerText = <p class="informacion">"No hay Trailer disponible"</p>
+            seccionTrailer.innerText = `<p class="informacion"> "No hay Trailer disponible"</p>`
         }
 
     })
