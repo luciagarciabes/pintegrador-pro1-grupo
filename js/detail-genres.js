@@ -25,23 +25,23 @@ fetch(urlPeliculas)
     })
     .then(function (data) {
         console.log(data.results)
-         let peliculas = data.results;
-         if (peliculas.length> 0){
-         let contenido = ""
-         for (let i = 0; i < 5; i++) {
+        let peliculas = data.results;
+        if (peliculas.length > 0) {
+            let contenido = ""
+            for (let i = 0; i < 5; i++) {
                 contenido += ` <li class="cada_titulo">
-                                    <a href="./detail-movie.html?idPelicula=${peliculas[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}"
-                                            alt="${peliculas[i].title}" height="250px">
-                                        <ul class="lista_anidada">
-                                            <li class="li_piedefoto">${peliculas[i].title} </li>
-                                            <li class="li_piedefoto"> Estreno: ${peliculas[i].release_date}</li>
-                                            <li class="vermas"> Ver más </li>
-                                    </a> </ul>
-                            </li>`
+                                        <a href="./detail-movie.html?idPelicula=${peliculas[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}"
+                                                alt="${peliculas[i].title}" height="250px">
+                                            <ul class="lista_anidada">
+                                                <li class="li_piedefoto">${peliculas[i].title} </li>
+                                                <li class="li_piedefoto"> Estreno: ${peliculas[i].release_date}</li>
+                                                <li class="vermas"> Ver más </li>
+                                        </a> </ul>
+                                </li>`
             };
-            listagenerospeliculas.innerHTML= contenido;
+            listagenerospeliculas.innerHTML = contenido;
         } else {
-            listagenerospeliculas.innerHTML= `<h2 class="informacion h2nohaygenero"> No hay peliculas para el género seleccionado</h2>`
+            listagenerospeliculas.innerHTML = `<h2 class="informacion h2nohaygenero"> No hay peliculas para el género seleccionado</h2>`
 
         }
     })
@@ -50,7 +50,7 @@ fetch(urlPeliculas)
 
     })
 
-/*generos series*/
+/* Fetch generos series*/
 
 fetch(urlSeries)
     .then(function (respuesta) {
@@ -59,11 +59,11 @@ fetch(urlSeries)
     })
     .then(function (data) {
         console.log(data.results)
-        let series= data.results;
-        if (series.length> 0){
-        let contenido2=""
-        for (let i = 0; i < 5; i++) {
-            contenido2+= `<li class="cada_titulo">
+        let series = data.results;
+        if (series.length > 0) {
+            let contenido2 = ""
+            for (let i = 0; i < 5; i++) {
+                contenido2 += `<li class="cada_titulo">
                             <a href="./detail-serie.html?idSerie=${series[i].id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt=" ${series[i].name}"   
                                 height="250px">
                                 <ul class="lista_anidada">
@@ -72,12 +72,12 @@ fetch(urlSeries)
                                 <li class="vermas"> Ver más </li>
 
                                 </ul> </a>
-                        </li>`                  
-        };
-        listagenerosseries.innerHTML= contenido2;
-    } else{
-        listagenerosseries.innerHTML= `<h2 class="informacion h2nohaygenero"> No hay series para el género seleccionado</h2>`
-    }
+                        </li>`
+            };
+            listagenerosseries.innerHTML = contenido2;
+        } else {
+            listagenerosseries.innerHTML = `<h2 class="informacion h2nohaygenero"> No hay series para el género seleccionado</h2>`
+        }
 
 
     })

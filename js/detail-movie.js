@@ -27,7 +27,7 @@ let botonrecomendacion = document.querySelector(".botonrecomendacion")
 
 let listaPlataformas = document.querySelector(".lista_plataformas")
 let recomendaciones = document.querySelector(".verrecomendaciones")
-let seccionReviews= document.querySelector(".seccionReviews")
+let seccionReviews = document.querySelector(".seccionReviews")
 let seccionTrailer = document.querySelector(".seccionTrailer")
 
 
@@ -56,7 +56,7 @@ fetch(peliculaDetalle)
         rating.innerText = ` Rating: ${pelicula.vote_average}`;
         sinopsis.innerText = pelicula.overview;
         geneross.innerHTML = ` Generos: ${infoGeneros}`;
-       
+
     })
     .catch(function (error) {
         return error
@@ -65,11 +65,11 @@ fetch(peliculaDetalle)
 
 /* Fetch para los proveedores */
 fetch(urlProveedores)
-.then(function (respuesta) {
-    return respuesta.json()
-})
-.then(function (data2) {
-    console.log(data2.results);
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data2) {
+        console.log(data2.results);
 
         if (data2.results.MX != undefined) {
             console.log(data2.results.MX.buy);
@@ -78,9 +78,9 @@ fetch(urlProveedores)
 
             for (let i = 0; i < arrayProveedores.length; i++) {
                 contenidoProveedores += `<li class="liproveedor"> 
-                                        <h3> ${arrayProveedores[i].provider_name}</h3>
-                                        <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
-                                    </li>`
+                                            <h3> ${arrayProveedores[i].provider_name}</h3>
+                                            <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
+                                        </li>`
             }
 
             listaPlataformas.innerHTML = contenidoProveedores
@@ -95,7 +95,7 @@ fetch(urlProveedores)
     })
 
 
-
+/* Seccion de recomendaciones */
 
 /* Fetch para Ver recomendaciones */
 fetch(urlRecomendaciones)
@@ -109,16 +109,16 @@ fetch(urlRecomendaciones)
         let contenidoRecomendaciones = ""
         for (let i = 0; i < 4; i++) {
             contenidoRecomendaciones += `<li class="cada_titulo">
-                                    <a href="./detail-movie.html?idPelicula=${pelisRecomendadas[i].id}"> 
-                                    <img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${pelisRecomendadas[i].poster_path}" alt="${pelisRecomendadas[i].original_title}"
-                                        height="250px">
-                                    <ul class="lista_anidada">
-                                        <li class="li_piedefoto"> ${pelisRecomendadas[i].original_title}</li>
-                                        <li class="li_piedefoto">Estreno: ${pelisRecomendadas[i].release_date}</li>
-                                        <li class="vermas"> Ver más </li>
-                                    </ul>
-                                    </a>
-                                </li>`
+                                            <a href="./detail-movie.html?idPelicula=${pelisRecomendadas[i].id}"> 
+                                            <img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${pelisRecomendadas[i].poster_path}" alt="${pelisRecomendadas[i].original_title}"
+                                                height="250px">
+                                            <ul class="lista_anidada">
+                                                <li class="li_piedefoto"> ${pelisRecomendadas[i].original_title}</li>
+                                                <li class="li_piedefoto">Estreno: ${pelisRecomendadas[i].release_date}</li>
+                                                <li class="vermas"> Ver más </li>
+                                            </ul>
+                                            </a>
+                                        </li>`
         };
 
         ulverrecomendaciones.innerHTML = contenidoRecomendaciones
@@ -130,12 +130,10 @@ fetch(urlRecomendaciones)
     })
 
 
+/*Botón recomndaciones (ver/ocultar) */
+let muestraRecomendaciones = false;
 
-
-    /* Seccion de recomendaciones */
-let muestraRecomendaciones= false;
-
-botonrecomendacion.addEventListener('click', function(e) {
+botonrecomendacion.addEventListener('click', function (e) {
     e.preventDefault();
 
     if (muestraRecomendaciones) {
@@ -150,81 +148,79 @@ botonrecomendacion.addEventListener('click', function(e) {
 })
 
 
-/* Favoritos*/ 
-let favoritosPeliculas= [];
-let recuperoStorage= localStorage.getItem("favoritosPeliculas")
+
+/* Favoritos*/
+let favoritosPeliculas = [];
+let recuperoStorage = localStorage.getItem("favoritosPeliculas")
 
 if (recuperoStorage != null) {
-    favoritosPeliculas= JSON.parse(recuperoStorage)
+    favoritosPeliculas = JSON.parse(recuperoStorage)
 }
-
 if (favoritosPeliculas.includes(idPelicula)) {
-    botonagregarfav.innerText= "Quitar de favoritos"
+    botonagregarfav.innerText = "Quitar de favoritos"
 }
 
 botonagregarfav.addEventListener("click", function (e) {
     e.preventDefault()
     if (favoritosPeliculas.includes(idPelicula)) {
-        let indice= favoritosPeliculas.indexOf(idPelicula)
+        let indice = favoritosPeliculas.indexOf(idPelicula)
         favoritosPeliculas.splice(indice, 1)
-        botonagregarfav.innerText= "Agregar a favoritos"
+        botonagregarfav.innerText = "Agregar a favoritos"
     } else {
         favoritosPeliculas.push(idPelicula)
-        botonagregarfav.innerText= "Quitar de favoritos"
+        botonagregarfav.innerText = "Quitar de favoritos"
     }
-    let favToString= JSON.stringify(favoritosPeliculas)
+    let favToString = JSON.stringify(favoritosPeliculas)
     localStorage.setItem("favoritosPeliculas", favToString)
-    
 })
 
 
-/* Sección Reviews */
- fetch(urlReviews)
- .then(function (respuesta) {
-     return respuesta.json()
- })
- .then(function (data) {
-    console.log(data.results)
-    let pelisReviews = data.results;
-    let infoReviews=""
-    for (let i = 0; i <3; i++) {
-        infoReviews+= ` <article class="reviews">
-                            <h2 class="informacion"> ${pelisReviews[i].author} </h2>
-                            <p class="sinopsis">  ${pelisReviews[i].content}</p>
-                        </article>
+/* Fetch Reviews */
+fetch(urlReviews)
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data) {
+        console.log(data.results)
+        let pelisReviews = data.results;
+        let infoReviews = ""
+        for (let i = 0; i < 3; i++) {
+            infoReviews += ` <article class="reviews">
+                                <h2 class="informacion"> ${pelisReviews[i].author} </h2>
+                                <p class="sinopsis">  ${pelisReviews[i].content}</p>
+                            </article>
                     `
-    }
-    seccionReviews.innerHTML= infoReviews;
-    
- })
+        }
+        seccionReviews.innerHTML = infoReviews;
+    })
 
- .catch(function (error) {
-     return error
- })
+    .catch(function (error) {
+        return error
+    })
 
 
-/* Sección Videos */
+/* Fetch Trailers */
 fetch(urlTrailer)
-.then(function (respuesta) {
-    return respuesta.json()
-})
-.then(function (data) {
-    console.log(data.results)
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data) {
+        console.log(data.results)
 
-    let pelisTrailer = data.results;
-    let infoTrailer = ""
+        let pelisTrailer = data.results;
+        let infoTrailer = ""
 
-    if (pelisTrailer != undefined || pelisTrailer != null || pelisTrailer.length != 0) {
+        if (pelisTrailer != undefined || pelisTrailer != null || pelisTrailer.length != 0) {
 
+            /*Faltaaaaaa */
+            seccionTrailer.innerHTML = infoTrailer
 
-        seccionTrailer.innerHTML = infoTrailer
+        } else {
+            seccionTrailer.innerText = <p class="informacion">"No hay Trailer disponible"</p>
+        }
 
-    } else {
-        seccionTrailer.innerText = <p class="informacion">"No hay Trailer disponible"</p>
-    }
+    })
+    .catch(function (error) {
 
-})
-.catch(function (error) {
-    
-})
+    })
 

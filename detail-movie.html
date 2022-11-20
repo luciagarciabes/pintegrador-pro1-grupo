@@ -20,8 +20,13 @@
 
 <body class="fondo">
 
-    <div class="lds-ring loader" id="loader"><div></div><div></div><div></div><div></div></div>
-
+    <!-- LOADER-->
+    <div class="lds-ring loader" id="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 
 
     <header class="header">
@@ -55,30 +60,33 @@
 
         <section class="cuadros-d">
             <article class="videodetalles">
-               <img  class="img-detalle-titulos" src="" alt="">
+                <img class="img-detalle-titulos" src="" alt="">
                 <h2 class="nombre-d nombre-detalle-pelicula"></h2>
             </article>
 
             <article class="texto-d texto-detalle-movie">
                 <ul class="w-100">
-                   <article class="flex">
-                        <li class="estreno" ><strong></strong></li>
-                        <li  class="duracion"><strong>   </strong></li>
-                        <li class="rating"> <strong> </strong> </li> 
+                    <article class="flex">
+                        <li class="estreno"><strong></strong></li>
+                        <li class="duracion"><strong> </strong></li>
+                        <li class="rating"> <strong> </strong> </li>
                     </article>
 
                     <li class="informacion sinopsis"></li>
-                    <li class="informacion generos"> <strong>    <a  class="generosboton" href="./detail-genres.html?idGenero=">  </strong> </a><li> 
-                    <li class="lifav botonagregarfav"> <a class="botonfav" href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> </li>  
-                    <li class="verrecomendaciones ">  <a href="###" class="botonfav botonrecomendacion"> Ver recomendaciones </a> </li>
-                    
+                    <li class="informacion generos"> <strong> <a class="generosboton"
+                                href="./detail-genres.html?idGenero="> </strong> </a>
+                    <li>
+                    <li class="lifav botonagregarfav"> <a class="botonfav"
+                            href="./favorite.html?idPelicula=${pelicula.id}"> Agregar a favoritos </a> </li>
+                    <li class="verrecomendaciones "> <a href="###" class="botonfav botonrecomendacion"> Ver
+                            recomendaciones </a> </li>
+
                 </ul>
             </article>
 
             <article class="articleverrecomendaciones">
                 <ul class=" lista_principal ulverrecomendaciones">
-                    
-                      
+
                 </ul>
 
             </article>
@@ -86,7 +94,7 @@
             <article class="texto-d article_plataformas ">
                 <h3 class="informacion proveedoresh3"> Dónde lo podes encontrar...</h3>
                 <ul class="lista_plataformas">
-                    <li> 
+                    <li>
                         <h3></h3>
                         <img src="" alt="">
                     </li>
@@ -111,30 +119,28 @@
         </section>
 
 
-        
-
     </main>
-    <footer class="footer" >
+    <footer class="footer">
         <article class="logo footer">
-          <img class="logofooter" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="logo footer">
+            <img class="logofooter" src="../pintegrador-pro1-grupo/img/LOGODEEEEF.png" alt="logo footer">
         </article>
-    
+
         <article class="nombres_footer">
-    
-          <ul class="lista_footer">
-            <li class="linombresfooter"> Clara Battaglia</li>
-            <li class="linombresfooter"> Martina Scarfoni</li>
-            <li class="linombresfooter"> Lucia García Bes</li>
-          </ul>
+
+            <ul class="lista_footer">
+                <li class="linombresfooter"> Clara Battaglia</li>
+                <li class="linombresfooter"> Martina Scarfoni</li>
+                <li class="linombresfooter"> Lucia García Bes</li>
+            </ul>
         </article>
-      
-    
-        <article class="logo-tmdb" >
-          <img  class="img-logo-tmbd" src="./img/TMDB logo.svg" alt="logo-tmdb">
+
+
+        <article class="logo-tmdb">
+            <img class="img-logo-tmbd" src="./img/TMDB logo.svg" alt="logo-tmdb">
         </article>
-      </footer>
-   <script  type="text/javascript" src="./js/detail-movie.js"></script> 
-   <script type="text/javascript" src="./js/validacion-formulario.js"></script>
+    </footer>
+    <script type="text/javascript" src="./js/detail-movie.js"></script>
+    <script type="text/javascript" src="./js/validacion-formulario.js"></script>
 </body>
 
 </html>

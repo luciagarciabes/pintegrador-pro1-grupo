@@ -5,9 +5,9 @@ let idSerie = qsObj.get('idSerie');
 
 /* api key y el endpoint de detalle de series y proveedores*/
 let api_key = "a999f9c45003fc79555aea4968543ddf";
-let serieDetalle= `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
+let serieDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
 let urlProveedores = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
- let urlRecomendaciones=`https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
+let urlRecomendaciones = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
 
 /* Capturo elementos */
 let img = document.querySelector(".img-detalle-titulos");
@@ -33,7 +33,7 @@ fetch(serieDetalle)
     )
     .then(function (data) {
         let serie = data;
-        /*console.log(serie);*/
+        console.log(serie);
         let infoGeneros = ""
         let generos = serie.genres
         for (let i = 0; i < generos.length; i++) {
@@ -48,7 +48,7 @@ fetch(serieDetalle)
         extra.innerText = serie.overview;
         geneross.innerHTML = `Géneros: ${infoGeneros}`
         /*botonagregarfav.innerHTML = `<a class="botonfav" href="./favorite.html?idSerie=${serie.id}"> Agregar a favoritos </a>`*/
-       
+
 
     })
     .catch(function (error) {
@@ -59,38 +59,35 @@ fetch(serieDetalle)
 
 /* Proveedores series mis cambios . */
 fetch(urlProveedores)
-.then(function (respuesta) {
-    return respuesta.json()
-})
-.then(function (data) {
-    console.log(data.results);
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data) {
+        console.log(data.results);
 
-    if (data.results.MX != undefined) {
-        console.log(data.results.MX.buy);
-        let arrayProveedores = data.results.MX.buy;
-        let contenidoProveedores = ""
+        if (data.results.MX != undefined) {
+            console.log(data.results.MX.buy);
+            let arrayProveedores = data.results.MX.buy;
+            let contenidoProveedores = ""
 
-        for (let i = 0; i < arrayProveedores.length; i++) {
-            contenidoProveedores += `<li class="liroveedor"> 
-                                        <h3> ${arrayProveedores[i].provider_name}</h3>
-                                        <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
-                                    </li>` 
-            
+            for (let i = 0; i < arrayProveedores.length; i++) {
+                contenidoProveedores += `<li class="liroveedor"> 
+                                            <h3> ${arrayProveedores[i].provider_name}</h3>
+                                            <img class="imagenesproveedores" src="https://image.tmdb.org/t/p/w500${arrayProveedores[i].logo_path}" alt="${arrayProveedores[i].provider_name}">
+                                        </li>`
+            }
+            listaPlataformas.innerHTML = contenidoProveedores
+        } else {
+            listaPlataformas.innerText = "no hay proveedores";
         }
-        listaPlataformas.innerHTML = contenidoProveedores
-    } else {
-        listaPlataformas.innerText = "no hay proveedores";
-    }
 
-})
-.catch(function (error) {
-    return error
-})
+    })
+    .catch(function (error) {
+        return error
+    })
 
 
-
-
-
+/* Seccion de recomendaciones*/
 
 /* Fetch del Ver recomendaciones */
 fetch(urlRecomendaciones)
@@ -116,25 +113,22 @@ fetch(urlRecomendaciones)
                                                     </ul>
                                             </a>
                                         </li>`
-            
+
         };
         ulverrecomendacionesSeries.innerHTML = contenidoRecomendaciones
-
-    
-      
 
     })
     .catch(function (error) {
         return error
-
     })
 
-     /* Seccion de recomendaciones*/
-let muestraRecomendaciones= false;
 
-botonrecomendacion.addEventListener('click', function(e) {
-    
-console.log("CLIC")
+/*Botón ver recomendaciones (mostrar/ocultar) */
+let muestraRecomendaciones = false;
+
+botonrecomendacion.addEventListener('click', function (e) {
+
+    console.log("CLIC")
     if (muestraRecomendaciones) {
         ulverrecomendacionesSeries.style.display = 'none';
         botonrecomendacion.innerText = 'Ver recomendaciones'
@@ -150,33 +144,32 @@ console.log("CLIC")
 
 /* Favoritos*/
 
-let favoritosSeries= [];
-let recuperoStorage= localStorage.getItem("favoritosSeries");
+let favoritosSeries = [];
+let recuperoStorage = localStorage.getItem("favoritosSeries");
 
 if (recuperoStorage != null) {
-    favoritosSeries= JSON.parse(recuperoStorage)
+    favoritosSeries = JSON.parse(recuperoStorage)
 }
-
 if (favoritosSeries.includes(idSerie)) {
-    botonagregarfav.innerText= "Quitar de favoritos"
+    botonagregarfav.innerText = "Quitar de favoritos"
 }
 
 botonagregarfav.addEventListener("click", function (e) {
     e.preventDefault()
     if (favoritosSeries.includes(idSerie)) {
-        let indice= favoritosSeries.indexOf(idSerie)
+        let indice = favoritosSeries.indexOf(idSerie)
         favoritosSeries.splice(indice, 1)
-        botonagregarfav.innerText= "Agregar a favoritos"
+        botonagregarfav.innerText = "Agregar a favoritos"
     } else {
         favoritosSeries.push(idSerie)
-        botonagregarfav.innerText= "Quitar de favoritos"
+        botonagregarfav.innerText = "Quitar de favoritos"
     }
 
-    let favToString= JSON.stringify(favoritosSeries)
-    localStorage.setItem("favoritosSeries",favToString)
-    
+    let favToString = JSON.stringify(favoritosSeries)
+    localStorage.setItem("favoritosSeries", favToString)
+
 })
 
 
-
+/*Fetch trailers */
 

@@ -13,7 +13,7 @@ let pNoHayFavsSeries = document.querySelector(".nohayfavsseries")
 
 
 
-/*Peliculas */
+/* Sección Peliculas */
 let peliculasFavs = "";
 if (favoritosPeliculas == null || favoritosPeliculas.length == 0) {
     pNoHayFavsPelis.innerHTML = `<p class="informacion h2nohaygenero"> No hay películas en favoritos </p>`
@@ -31,25 +31,25 @@ if (favoritosPeliculas == null || favoritosPeliculas.length == 0) {
                 console.log(data);
 
                 peliculasFavs += `<li class="cada_titulo">
-                                    <a href="./detail-movie.html?idPelicula=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.title}"   
-                                        height="250px">
-                                        <ul class="lista_anidada">
-                                            <li class="li_piedefoto"> ${data.title} </li>
-                                            <li class="li_piedefoto">Estreno: ${data.release_date} </li>
-                                            <li class="vermas"> Ver más </li>
+                                        <a href="./detail-movie.html?idPelicula=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.title}"   
+                                            height="250px">
+                                            <ul class="lista_anidada">
+                                                <li class="li_piedefoto"> ${data.title} </li>
+                                                <li class="li_piedefoto">Estreno: ${data.release_date} </li>
+                                                <li class="vermas"> Ver más </li>
 
-                                        </ul> </a>
-                                </li>`
+                                            </ul> </a>
+                                    </li>`
                 listaPeliculas.innerHTML = peliculasFavs;
             })
             .catch(function (error) {
                 return error
-
             })
     }
 }
 
-/* Series  */
+
+/*  Sección Series  */
 let series = ""
 if (favoritosSeries == null || favoritosSeries.length == 0) {
     pNoHayFavsSeries.innerHTML = `<p class="informacion h2nohaygenero"> No hay series en favoritos </p>`
@@ -65,23 +65,20 @@ if (favoritosSeries == null || favoritosSeries.length == 0) {
             .then(function (data) {
                 console.log(data)
                 series += `<li class="cada_titulo">
-                            <a href="./detail-serie.html?idSerie=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.original_name}"   
-                            height="250px">
-                                <ul class="lista_anidada ulfavpelis">
-                                    <li class="li_piedefoto"> ${data.original_name} </li>
-                                    <li class="li_piedefoto">Estreno: ${data.first_air_date} </li>
-                                    <li class="vermas"> Ver más </li>
+                                <a href="./detail-serie.html?idSerie=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.original_name}"   
+                                height="250px">
+                                    <ul class="lista_anidada ulfavpelis">
+                                        <li class="li_piedefoto"> ${data.original_name} </li>
+                                        <li class="li_piedefoto">Estreno: ${data.first_air_date} </li>
+                                        <li class="vermas"> Ver más </li>
 
-                                </ul> </a>
-                    </li>`
+                                    </ul> </a>
+                            </li>`
                 listaSeries.innerHTML = series;
-
-
             })
             .catch(function (error) {
 
             })
-
     }
 }
 
