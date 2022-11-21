@@ -867,3 +867,8 @@ a {
 .ulfavpelis{
     width: 100%;
 }
+
+.seccionTrailer{
+    display: flex;
+}
+
