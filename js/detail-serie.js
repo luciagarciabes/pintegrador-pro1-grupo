@@ -8,11 +8,13 @@ let api_key = "a999f9c45003fc79555aea4968543ddf";
 let serieDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key}&language=en-US`;
 let urlProveedores = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
 let urlRecomendaciones = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
+let urlReviews = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=${api_key}&language=en-US&page=1`
 
 /* Capturo elementos */
 let img = document.querySelector(".img-detalle-titulos");
 let textoDetalleSerie = document.querySelector(".texto-detalle-serie");
 let nombreDetalleSerie = document.querySelector(".nombre-detalle-serie")
+let seccionReviews = document.querySelector(".seccionReviews")
 
 let estreno = document.querySelector(".estreno")
 let temporada = document.querySelector(".temporada")
@@ -170,6 +172,28 @@ botonagregarfav.addEventListener("click", function (e) {
 
 })
 
+
+/*Fetch Reviews*/
+fetch(urlReviews)
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
+    .then(function (data) {
+        console.log(data.results)
+        let seriesReviews = data.results;
+        let infoReviews = ""
+        for (let i = 0; i < 3; i++) {
+            infoReviews += ` <article class="reviews">
+                                <h2 class="informacion"> ${seriesReviews[i].author} </h2>
+                                <p class="sinopsis">  ${seriesReviews[i].content} </p>
+                            </article>
+                    `
+        }
+        seccionReviews.innerHTML = infoReviews;
+    })
+    .catch(function (error) {
+        return error
+    })
 
 /*Fetch trailers */
 

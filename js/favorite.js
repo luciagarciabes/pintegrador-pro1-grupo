@@ -30,7 +30,7 @@ if (favoritosPeliculas == null || favoritosPeliculas.length == 0) {
             .then(function (data) {
                 console.log(data);
 
-                peliculasFavs += `<li class="cada_titulo">
+                peliculasFavs += `<li class="cada_titulo cadapelifav">
                                         <a href="./detail-movie.html?idPelicula=${data.id}"><img class="imagenes_home" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt=" ${data.title}"   
                                             height="250px">
                                             <ul class="lista_anidada">
