@@ -168,6 +168,7 @@ body {
 
 }
 
+
 /* main*/
 .seccion_foto_principal {
     background-image: url(../img/fondo\ home\ mas\ oscura.png);
@@ -891,4 +892,8 @@ a {
     width: 16%;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.nohayresenas{
+    color: white;  
 }
