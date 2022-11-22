@@ -886,6 +886,7 @@ a {
 
 .seccionTrailer {
     display: flex;
+    flex-direction: column;
 }
 
 .cadapelifav {

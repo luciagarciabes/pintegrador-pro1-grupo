@@ -9,12 +9,14 @@ let serieDetalle = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${api_key
 let urlProveedores = `https://api.themoviedb.org/3/tv/${idSerie}/watch/providers?api_key=${api_key}`
 let urlRecomendaciones = `https://api.themoviedb.org/3/tv/${idSerie}/recommendations?api_key=${api_key}&language=en-US&page=1`
 let urlReviews = `https://api.themoviedb.org/3/tv/${idSerie}/reviews?api_key=${api_key}&language=en-US&page=1`
+let urlTrailerSeries = `https://api.themoviedb.org/3/tv/${idSerie}/videos?api_key=${api_key}&language=en-US`
 
 /* Capturo elementos */
 let img = document.querySelector(".img-detalle-titulos");
 let textoDetalleSerie = document.querySelector(".texto-detalle-serie");
 let nombreDetalleSerie = document.querySelector(".nombre-detalle-serie")
 let seccionReviews = document.querySelector(".seccionReviews")
+let seccionTrailerSeries = document.querySelector(".seccionTrailerSeries")
 
 let estreno = document.querySelector(".estreno")
 let temporada = document.querySelector(".temporada")
@@ -196,4 +198,41 @@ fetch(urlReviews)
     })
 
 /*Fetch trailers */
+
+fetch(urlTrailerSeries)
+.then(function (respuesta) {
+    return respuesta.json()
+})
+.then(function (data) {
+    console.log(data.results)
+    let seriesTrailer = data.results;
+    let contenidoTrailer = "";
+
+    if (seriesTrailer == undefined || seriesTrailer == null || seriesTrailer.length == 0) {
+        contenidoTrailer = `<p class="informacion"> "No hay trailer disponible"</p>`
+        seccionTrailerSeries.innerHTML = contenidoTrailer
+    } 
+    else {
+        for (let i = 0; i < seriesTrailer.length; i++) {
+            if (seriesTrailer[i].type == "Trailer") {
+                contenidoTrailer = `<h2 class="titReviews">Trailer</h2>
+                                        <iframe width="40%" height="315" src="https://www.youtube.com/embed/${pelisTrailer[i].key}"
+                                        title="Youtube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>`
+            }
+        }
+        if (contenidoTrailer == "") {
+            contenidoTrailer = `<p class="informacion"> "No hay trailer disponible"</p>`
+        }
+    }
+    seccionTrailerSeries.innerHTML = contenidoTrailer
+    return data
+})
+.catch(function (error) {
+})
+
+
+
+
 

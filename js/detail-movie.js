@@ -193,7 +193,6 @@ fetch(urlReviews)
         }
         seccionReviews.innerHTML = infoReviews;
     })
-
     .catch(function (error) {
         return error
     })
@@ -206,21 +205,30 @@ fetch(urlTrailer)
     })
     .then(function (data) {
         console.log(data.results)
-
         let pelisTrailer = data.results;
-        let infoTrailer = ""
+        let contenidoTrailer = "";
 
-        if (pelisTrailer != undefined || pelisTrailer != null || pelisTrailer.length != 0) {
-
-            /*Faltaaaaaa */
-            seccionTrailer.innerHTML = infoTrailer
-
-        } else {
-            seccionTrailer.innerText = `<p class="informacion"> "No hay Trailer disponible"</p>`
+        if (pelisTrailer == undefined || pelisTrailer == null || pelisTrailer.length == 0) {
+            contenidoTrailer = `<p class="informacion"> "No hay trailer disponible"</p>`
+            seccionTrailer.innerHTML = contenidoTrailer
+        } 
+        else {
+            for (let i = 0; i < pelisTrailer.length; i++) {
+                if (pelisTrailer[i].type == "Trailer") {
+                    contenidoTrailer = `<h2 class="titReviews">Trailer</h2>
+                                            <iframe width="40%" height="315" src="https://www.youtube.com/embed/${pelisTrailer[i].key}"
+                                            title="Youtube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>`
+                }   
+            }
+            if (contenidoTrailer == "") {
+                contenidoTrailer = `<p class="informacion"> "No hay trailer disponible"</p>`
+            }
         }
-
+        seccionTrailer.innerHTML = contenidoTrailer
+        return data
     })
     .catch(function (error) {
-
     })
 
